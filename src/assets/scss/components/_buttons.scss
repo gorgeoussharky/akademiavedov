@@ -1,3 +1,12 @@
-%btn-accent {
-    color: $accent;
+%btn {
+    border-radius: rem(14px);
+    padding: rem(30px) rem(75px);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: rem(16px);
+    line-height: rem(18px);
+    font-weight: 600;
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 rem(4px) 0 0 #6a0017, 0 rem(10px) rem(15px) 0 #6a0017;
 }
