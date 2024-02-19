@@ -320,6 +320,74 @@
 
     </div>
 
+    <div class="reviews">
+
+        <div class="reviews__wrap">
+
+            <div class="container">
+
+                <div class="reviews__content">
+
+                    <h2 class="reviews__heading">Отзывы и результаты наставничества</h2>
+
+                    <div class="reviews__list-wrap swiper">
+
+                        <ul class="reviews__list swiper-wrapper">
+
+                            {{#range 2}}
+
+                            <li class="reviews__reviews-item reviews-item swiper-slide">
+
+                                <div class="reviews-item__video">
+
+                                    <video src="" poster="@assets/img/reviews-poster-img-1.png">
+
+                                    </video>
+
+                                </div>
+
+                            </li>
+
+                            <li class="reviews__reviews-item reviews-item swiper-slide">
+
+                                <div class="reviews-item__video">
+
+                                    <video src="" poster="@assets/img/reviews-poster-img-2.png">
+
+                                    </video>
+
+                                </div>
+
+                            </li>
+
+                            <li class="reviews__reviews-item reviews-item swiper-slide">
+
+                                <div class="reviews-item__video">
+
+                                    <video src="" poster="@assets/img/reviews-poster-img-3.png">
+
+                                    </video>
+
+                                </div>
+
+                            </li>
+
+                            {{/range}}
+
+                        </ul>
+
+                        <div class="reviews__pagination"></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </main>
 
 {{> ./layout/footer }}

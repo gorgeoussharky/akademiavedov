@@ -13,6 +13,7 @@ $container-max-widths: (
 @import "~bootstrap/scss/reboot";
 @import "~bootstrap/scss/containers";
 @import "~sass-rem/rem";
+@import "swiper/scss";
 @import "mixins/utility";
 @import "base/variables";
 @import "base/fonts";
@@ -27,3 +28,4 @@ $container-max-widths: (
 @import "sections/hero";
 @import "sections/tasks";
 @import "sections/trainings";
+@import "sections/reviews";
