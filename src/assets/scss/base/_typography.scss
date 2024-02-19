@@ -1,3 +1,17 @@
 h1 {
-    font-weight: 700;
+    font-family: "Marck Script", sans-serif;
+    color: var(--main);
+    font-size: rem(100px);
+    font-weight: 400;
+    line-height: rem(124px);
+}
+
+h2 {
+    font-family: "Marck Script", sans-serif;
+    color: var(--main);
+    font-weight: 400;
+    font-size: rem(60px);
+    line-height: rem(74px);
+    text-align: center;
+    margin-bottom: rem(20px);
 }
