@@ -1,0 +1,104 @@
+.consultation {
+    &__wrap {
+        position: relative;
+        margin-bottom: rem(100px);
+
+        &::before {
+            position: absolute;
+            content: "";
+            background-image: url("/src/assets/img/consultation-bg-1.png");
+            height: rem(1030px);
+            width: 100%;
+            bottom: rem(130px);
+            left: 0;
+            background-size: cover;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            background-image: url("/src/assets/img/consultation-bg-2.png");
+            height: rem(460px);
+            width: rem(800px);
+            bottom: rem(-300px);
+            right: 0;
+            background-size: cover;
+        }
+    }
+
+    &__content {
+        display: flex;
+    }
+
+    &__text-content {
+        position: relative;
+        z-index: 10;
+    }
+
+    &__heading {
+        text-align: start;
+    }
+
+    &__text {
+        line-height: rem(24px);
+        margin-bottom: rem(30px);
+        max-width: rem(650px);
+    }
+
+    &__btn {
+        @extend %btn;
+    }
+
+    &__img {
+        &::after {
+            position: absolute;
+            content: "";
+            width: rem(960px);
+            height: rem(1280px);
+            background-image: url("/src/assets/img/consultation-img-1.png");
+            top: rem(-400px);
+            right: rem(100px);
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: rem(640px);
+            height: rem(640px);
+            background-image: url("/src/assets/img/consultation-img-2.png");
+            bottom: rem(-160px);
+            right: rem(220px);
+            background-size: contain;
+            animation: rotate 60s normal linear infinite;
+        }
+    }
+}
+
+.consultation-advantages {
+    &__list {
+        @include unlist();
+
+        display: flex;
+        gap: rem(60px);
+        list-style: none;
+        margin-bottom: rem(50px);
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+
+        svg {
+            margin-bottom: rem(15px);
+        }
+    }
+
+    &__text {
+        line-height: rem(20px);
+        width: rem(200px);
+
+        span {
+            font-weight: 700;
+        }
+    }
+}

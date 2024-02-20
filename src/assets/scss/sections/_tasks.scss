@@ -1,0 +1,101 @@
+.tasks {
+    &__wrap {
+        position: relative;
+        z-index: 5;
+        margin-bottom: rem(100px);
+
+        &::after {
+            position: absolute;
+            content: "";
+            background-image: url("/src/assets/img/tasks-bg-1.png");
+            width: rem(740px);
+            height: rem(660px);
+            bottom: rem(-350px);
+            left: 0;
+            z-index: -1;
+        }
+    }
+
+    &__heading {
+        font-family: "Marck Script", sans-serif;
+        color: var(--main);
+        font-weight: 400;
+        font-size: rem(60px);
+        line-height: rem(74px);
+        text-align: center;
+        margin-bottom: rem(20px);
+    }
+
+    &__list {
+        @include unlist();
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: rem(30px);
+    }
+
+    &__tasks-item {
+        width: calc(33% - 17px);
+
+        @include media-breakpoint-down(lg) {
+            width: calc(50% - 17px);
+        }
+
+        @include media-breakpoint-down(sm) {
+            width: 90%;
+        }
+    }
+}
+
+.tasks-item {
+    &__link {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        border: 1px solid var(--accent);
+        background-color: #f1f1f1;
+        border-radius: rem(15px);
+        text-decoration: none;
+        min-height: rem(280px);
+        padding: rem(40px);
+        padding-top: rem(60px);
+        gap: rem(14px);
+        transition: 500ms;
+
+        &:hover {
+            background-color: #fff;
+            border: 1px solid transparent;
+            box-shadow: 0 rem(20px) rem(20px) 0 rgba(0 0 0 / 2%);
+            transition: 500ms;
+        }
+
+        @include media-breakpoint-down(xl) {
+            padding: rem(25px);
+            padding-top: rem(60px);
+        }
+    }
+
+    &__number {
+        color: var(--accent);
+        font-weight: 300;
+        font-size: rem(60px);
+        line-height: rem(72px);
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: rem(1px);
+            height: rem(60px);
+            top: 0;
+            left: 50%;
+            background-color: var(--accent);
+        }
+    }
+
+    &__heading {
+        font-weight: 700;
+        font-size: rem(18px);
+    }
+}

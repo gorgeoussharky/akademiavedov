@@ -1,0 +1,153 @@
+.preregistration {
+    &__wrap {
+        position: relative;
+        margin-bottom: rem(100px);
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: rem(396px);
+            height: rem(396px);
+            background-image: url("/src/assets/img/preregistration-bg-2.png");
+            bottom: rem(-60px);
+            left: 40%;
+            background-size: contain;
+            animation: rotate 60s normal linear infinite;
+        }
+    }
+
+    &__content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        background-color: #fff;
+        border-radius: rem(14px);
+        padding: rem(100px);
+        overflow: hidden;
+        box-shadow: 0 rem(20px) rem(20px) 0 rgba(0 0 0 / 2%);
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: rem(985px);
+            height: rem(415px);
+            background-image: url("/src/assets/img/preregistration-bg-1.png");
+            top: rem(-60px);
+            right: rem(-60px);
+            background-size: contain;
+            z-index: 1;
+        }
+    }
+
+    &__content-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: rem(16px);
+        z-index: 3;
+    }
+
+    &__text-content {
+        margin-right: 0;
+        margin-left: auto;
+        max-width: rem(540px);
+    }
+
+    &__text {
+        font-size: rem(20px);
+        line-height: rem(24px);
+    }
+
+    &__heading {
+        margin: 0;
+    }
+
+    &__forms-wrap {
+        display: flex;
+        justify-content: center;
+        gap: rem(30px);
+    }
+
+    &__select {
+        border: 1px solid #c9c9c9;
+        border-radius: rem(14px);
+        padding: rem(18px);
+        width: rem(280px);
+    }
+
+    &__form-control {
+        border: 1px solid #c9c9c9;
+        border-radius: rem(14px);
+        padding: rem(18px);
+        width: rem(270px);
+    }
+
+    &__btn {
+        @extend %btn;
+
+        padding: rem(18px) rem(60px);
+    }
+
+    &__form-group--checkbox {
+        .preregistration__control {
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+            margin: 0;
+
+            &:checked {
+                ~ label {
+                    &::before {
+                        background-color: #fff;
+                        border: 1px solid var(--accent);
+                    }
+
+                    &::after {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    &__label {
+        position: relative;
+        font-size: rem(10px);
+        line-height: rem(14px);
+
+        a {
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--accent);
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            left: rem(-15px);
+            width: rem(9px);
+            height: rem(9px);
+            border-radius: 50%;
+            border: 1px solid var(--accent);
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            display: none;
+            width: rem(5px);
+            height: rem(5px);
+            left: rem(-13px);
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            border-radius: 50%;
+            background-color: var(--accent);
+        }
+    }
+}
