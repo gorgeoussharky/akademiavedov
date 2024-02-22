@@ -78,7 +78,7 @@
 
                         {{> picture class="hero__img" src="hero-img-1.png" }}
 
-                        <button class="hero__video-btn" data-modal="videoModal">
+                        <button class="hero__video-btn" data-video="https://www.youtube.com/embed/_JUBzbsIEII?si=DkiawRhYnn1DiMOJ" data-modal="videoModal">
                             <svg width="30" height="32" viewBox="0 0 30 32" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -105,7 +105,7 @@
 
     </article>
 
-    <div class="tasks">
+    <article class="tasks">
 
         <div class="tasks__wrap" data-aos="fade-up">
 
@@ -184,9 +184,9 @@
 
         </div>
 
-    </div>
+    </article>
 
-    <div class="trainings" id="trainings">
+    <article class="trainings" id="trainings">
 
         <div class="trainings__wrap">
 
@@ -198,130 +198,28 @@
 
                     <ul class="trainings__list">
 
+                        {{#each data.trainings}}
                         <li class="trainings__trainings-item trainings-item" data-aos="fade-up">
+                            <section class="trainings-item__wrap">
+                                <a href="" class="trainings-item__link">
 
-                            <a href="" class="trainings-item__link">
-
-                                {{> picture class="trainings-item__img" src="trainings-img-1.png" }}
-
-                                <div class="trainings-item__body">
-
-                                    <div class="trainings-item__heading">
-                                        Управлять финансами может каждый
+                                    {{> picture class="trainings-item__img" src=this.img }}
+    
+                                    <div class="trainings-item__body">
+    
+                                        <h2 class="trainings-item__heading">
+                                            {{this.title}}
+                                        </h2>
+    
+                                        <div class="trainings-item__text">
+                                            {{{ this.desc }}}
+                                        </div>
+    
                                     </div>
-
-                                    <div class="trainings-item__text">
-                                        <span>Получи все ответы и построй свой финансовый фундамент</span> с помощью
-                                        30+ часов ведических знаний, практик и техник
-                                    </div>
-
-                                </div>
-                            </a>
+                                </a>
+                            </section>
                         </li>
-
-                        <li class="trainings__trainings-item trainings-item" data-aos="fade-up">
-
-                            <a href="" class="trainings-item__link">
-
-                                {{> picture class="trainings-item__img" src="trainings-img-2.png" }}
-
-                                <div class="trainings-item__body">
-
-                                    <div class="trainings-item__heading">
-                                        Основы здорового питания
-                                    </div>
-
-                                    <div class="trainings-item__text">
-                                        <span>Правильно питаясь, можно без труда избавиться</span> от многих
-                                        болезней, которые мучают вас годами
-                                    </div>
-
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="trainings__trainings-item trainings-item" data-aos="fade-up">
-
-                            <a href="" class="trainings-item__link">
-
-                                {{> picture class="trainings-item__img" src="trainings-img-3.png" }}
-
-                                <div class="trainings-item__body">
-
-                                    <div class="trainings-item__heading">
-                                        Как изменить судьбу
-                                    </div>
-
-                                    <div class="trainings-item__text">
-                                        Построите четкий план как за следующие месяцы вы сможете <span>изменить
-                                            конкретно свою ситуацию и свою судьбу</span>
-                                    </div>
-
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="trainings__trainings-item trainings-item" data-aos="fade-up">
-
-                            <a href="" class="trainings-item__link">
-
-                                {{> picture class="trainings-item__img" src="trainings-img-4.png" }}
-
-                                <div class="trainings-item__body">
-
-                                    <div class="trainings-item__heading">
-                                        Исследуйте тайны мира
-                                    </div>
-
-                                    <div class="trainings-item__text">
-                                        <span>Откройте правду о мире</span> на нашем семинаре!
-                                    </div>
-
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="trainings__trainings-item trainings-item" data-aos="fade-up">
-
-                            <a href="" class="trainings-item__link">
-
-                                {{> picture class="trainings-item__img" src="trainings-img-5.png" }}
-
-                                <div class="trainings-item__body">
-
-                                    <div class="trainings-item__heading">
-                                        Бхавагад-Гита
-                                    </div>
-
-                                    <div class="trainings-item__text">
-                                        <span>Интенсив учит принятию решений</span> на основе разума, расширяет
-                                        духовное сознание и снижает стресс
-                                    </div>
-
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="trainings__trainings-item trainings-item" data-aos="fade-up">
-
-                            <a href="" class="trainings-item__link">
-
-                                {{> picture class="trainings-item__img" src="trainings-img-6.png" }}
-
-                                <div class="trainings-item__body">
-
-                                    <div class="trainings-item__heading">
-                                        Высокочастотные медитативные практики
-                                    </div>
-
-                                    <div class="trainings-item__text">
-                                        <span>Уникальные трансформационные медитации</span> - для быстрых и видимых
-                                        результатов в вашей жизни
-                                    </div>
-
-                                </div>
-                            </a>
-                        </li>
+                        {{/each}}
 
                     </ul>
 
@@ -337,9 +235,9 @@
 
         </div>
 
-    </div>
+    </article>
 
-    <div class="reviews">
+    <article class="reviews" id="reviews">
 
         <div class="reviews__wrap" data-aos="fade-up">
 
@@ -393,9 +291,9 @@
 
         </div>
 
-    </div>
+    </article>
 
-    <div class="consultation">
+    <article class="consultation" id="consultation">
 
         <div class="consultation__wrap">
 
@@ -455,9 +353,9 @@
 
                         </div>
 
-                        <button class="consultation__btn">
+                        <a href="#reg" class="consultation__btn">
                             Записаться на консультацию
-                        </button>
+                        </a>
 
                     </div>
 
@@ -473,11 +371,11 @@
 
         </div>
 
-    </div>
+    </article>
 
-    <div class="about">
+    <article class="about" data-aos="fade-up" id="about">
 
-        <div class="about__wrap" data-aos="fade-right">
+        <div class="about__wrap" >
 
             <div class="container">
 
@@ -527,7 +425,7 @@
 
                     </div>
 
-                    <div class="about__img-wrap" data-aos="fade-right">
+                    <div class="about__img-wrap">
 
                         {{> picture class="about__img" src="about-img-1.png" }}
 
@@ -538,16 +436,14 @@
             </div>
 
             <div class="about__bg-wrap">
-
-                <div data-aos="fade-right">{{> picture class="about__bg" src="about-bg-1.png" }}</div>
-
+                {{> picture class="about__bg" src="about-bg-1.png" }}
             </div>
 
         </div>
 
-    </div>
+    </article>
 
-    <div class="videos">
+    <article class="videos">
 
         <div class="videos__wrap" data-aos="fade-up">
 
@@ -643,9 +539,9 @@
 
         </div>
 
-    </div>
+    </article>
 
-    <div class="preregistration">
+    <article class="preregistration" id="reg">
 
         <div class="preregistration__wrap" data-aos="fade-up">
 
@@ -672,7 +568,7 @@
                             Исследуйте тайны мира, Бхавагад-Гита, Высокочастотные медитативные практики'
                             name="course" }}
 
-                            {{> ./form/input class="preregistration__form-control" type='tel' placeholder="Введите ваш телефон"
+                            {{> ./form/input class="preregistration__input" type='tel' placeholder="Введите ваш телефон"
                             options='1, 2'}}
 
                             <button class="preregistration__btn">
@@ -699,7 +595,7 @@
 
         </div>
 
-    </div>
+    </article>
 
 </main>
 

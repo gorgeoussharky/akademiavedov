@@ -7,11 +7,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
         btnEL.addEventListener('click', (e) => {
             e.preventDefault()
-            const { modal } = btnEL.dataset
+            const { modal, video } = btnEL.dataset
 
             if (modal) {
                 const modalEl = document.querySelector(`#${modal}`) as HTMLDialogElement | undefined
                 modalEl?.showModal()
+
+                if (modalEl?.id === 'videoModal' && video) {
+                    const videoFrame = modalEl.querySelector('iframe')
+
+                    if (videoFrame) {
+                        videoFrame.src = video
+                    }
+                }
             }
         })
     })
@@ -68,6 +76,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         modalEl.addEventListener('close', () => {
             document.documentElement.classList.remove('locked')
+
+            if (modalEl.id === 'videoModal') {
+                const videoFrame = modalEl.querySelector('iframe')
+                
+                if (videoFrame) {
+                    videoFrame.src = ''
+                }
+            }
         })
 
         modalObserver.observe(modalEl, {

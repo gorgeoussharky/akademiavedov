@@ -12,8 +12,9 @@
         border-radius: rem(14px);
         padding: rem(18px);
         padding-right: rem(42px);
-        display: flex;
-        align-items: center;
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
         text-align: left;
         background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.3999 5.5509C14.2592 5.34778 14.0717 5.26965 13.8217 5.3134C13.7155 5.33528 13.403 5.63528 10.853 8.18528L7.99985 11.0353L5.14985 8.18528C2.04985 5.0884 2.2436 5.2634 1.9436 5.3134C1.6311 5.3634 1.4436 5.71965 1.56235 6.04153C1.6061 6.15715 7.6061 12.1603 7.7561 12.2415C7.82173 12.2728 7.9311 12.3009 7.99985 12.3009C8.0686 12.3009 8.17798 12.2728 8.2436 12.2415C8.3936 12.1603 14.3936 6.15715 14.4374 6.04153C14.4936 5.8884 14.4749 5.6634 14.3999 5.5509Z' fill='%23530012'/%3E%3C/svg%3E%0A");
         background-repeat: no-repeat;
@@ -21,6 +22,7 @@
         cursor: pointer;
         appearance: none;
         width: 100%;
+        white-space: nowrap;
 
         &--lg {
             @include media-breakpoint-down(lg) {
@@ -38,7 +40,7 @@
     &__dropdown {
         display: none;
         width: 100%;
-        max-height: 300px;
+        max-height: 200px;
         overflow: auto;
         padding: rem(10px 18px);
         background-color: #fff;
@@ -48,6 +50,22 @@
         z-index: 10;
         left: 0;
         top: calc(100% + 10px);
+        scrollbar-width: thin;
+        scrollbar-color: var(--accent) transparent;
+
+        &::-webkit-scrollbar {
+            width: 2px;
+            background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--accent);
+        }
+
+        &::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 6px transparent;
+            background-color: transparent;
+        }
 
         @include media-breakpoint-down(lg) {
             display: none;

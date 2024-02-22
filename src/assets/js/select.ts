@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () =>{
+document.addEventListener('DOMContentLoaded', () => {
     const selects = document.querySelectorAll('.select')
 
     selects.forEach((el) => {
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () =>{
                 const { value } = (btn as HTMLButtonElement).dataset
 
                 if (!value || !toggler || !select) return
-                
+
                 // sync with select and toggler
                 toggler.innerHTML = value
                 select.value = value
@@ -22,8 +22,15 @@ document.addEventListener('DOMContentLoaded', () =>{
             })
         })
 
-        toggler?.addEventListener('click', () => {
+        toggler?.addEventListener('click', (e) => {
+            e.stopPropagation()
             dropdown?.classList.toggle('select__dropdown--active')
+        })
+
+        document.addEventListener('click', (e) => {
+            if (dropdown?.contains(e.target as HTMLElement)) return
+
+            dropdown?.classList.remove('select__dropdown--active')
         })
     })
 })

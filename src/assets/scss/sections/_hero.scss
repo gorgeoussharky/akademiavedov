@@ -3,11 +3,12 @@
         position: relative;
         padding-top: rem(100px);
         margin-bottom: rem(120px);
+        overflow: hidden;
 
         &::before {
             position: absolute;
             content: "";
-            background-image: url("/src/assets/img/hero-bg-m.png");
+            background: linear-gradient(0deg, #f1f1f1 20%, transparent 100%);
             height: rem(460px);
             width: 100vw;
             bottom: rem(-60px);
@@ -29,7 +30,7 @@
         position: relative;
         z-index: 10;
 
-        @include media-breakpoint-down(xl) {
+        @include media-breakpoint-down(lg) {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -89,7 +90,7 @@
         width: 50vw;
         max-width: rem(490px);
 
-        img{
+        img {
             width: 100%;
         }
 
@@ -105,7 +106,7 @@
             animation: rotate 60s normal linear infinite;
             z-index: -1;
 
-            @include media-breakpoint-down(xl) {
+            @include media-breakpoint-down(lg) {
                 left: 0;
                 right: 0;
                 bottom: 0;
@@ -118,7 +119,7 @@
             }
         }
 
-        @include media-breakpoint-down(xl) {
+        @include media-breakpoint-down(lg) {
             position: relative;
             left: 0;
             right: 0;
@@ -171,7 +172,7 @@
             animation-delay: 1s;
         }
 
-        @include media-breakpoint-down(xl) {
+        @include media-breakpoint-down(lg) {
             width: rem(90px);
             height: rem(90px);
             left: 30%;
@@ -188,7 +189,7 @@
             width: 30vw;
         }
 
-        @include media-breakpoint-down(xl) {
+        @include media-breakpoint-down(lg) {
             display: none;
         }
     }
@@ -203,7 +204,7 @@
             width: 40vw;
         }
 
-        @include media-breakpoint-down(xl) {
+        @include media-breakpoint-down(lg) {
             bottom: -140px;
 
             img {
@@ -235,7 +236,7 @@
             margin-bottom: rem(15px);
         }
 
-        @include media-breakpoint-down(xl) {
+        @include media-breakpoint-down(lg) {
             align-items: center;
         }
 

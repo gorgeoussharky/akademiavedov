@@ -19,7 +19,7 @@
     }
 
     &__content {
-        max-width: 600px;
+        max-width: 1000px;
         width: calc(100% - 24px);
         height: fit-content;
         margin: auto;
@@ -27,6 +27,7 @@
 
         iframe {
             width: 100%;
+            height: rem(600px);
         }
     }
 

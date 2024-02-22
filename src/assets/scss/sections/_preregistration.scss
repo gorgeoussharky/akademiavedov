@@ -74,6 +74,8 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: rem(30px);
+        width: 100%;
+        max-width: rem(850px);
 
         @include media-breakpoint-down(lg) {
             grid-template-columns: 1fr;
@@ -81,9 +83,15 @@
         }
     }
 
+    &__input,
+    &__select {
+        min-width: 1px;
+    }
+
     &__btn {
         @extend %btn;
 
+        min-width: 1px;
         display: block;
         padding: rem(18px) rem(60px);
 

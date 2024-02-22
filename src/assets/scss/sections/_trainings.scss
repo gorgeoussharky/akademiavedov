@@ -101,6 +101,8 @@
         line-height: rem(32px);
         font-weight: 700;
         margin-bottom: rem(20px);
+        font-family: Gilroy, sans-serif;
+        color: inherit;
 
         @include media-breakpoint-down(lg) {
             font-size: rem(22px);
