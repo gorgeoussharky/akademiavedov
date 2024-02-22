@@ -4,10 +4,10 @@
     }
 
     &__control {
-        background: transparent;
-        border: none;
-        padding: rem(16px 0);
-        width: 100%;
+        border: 1px solid #c9c9c9;
+        border-radius: rem(14px);
+        padding: rem(18px);
+        width: rem(270px);
 
         &::placeholder {
             color: #8d8d8d;

@@ -1,17 +1,10 @@
 .about {
     &__wrap {
         position: relative;
-        padding-bottom: rem(100px);
+        margin-bottom: rem(100px);
 
-        &::after {
-            position: absolute;
-            content: "";
-            width: rem(574px);
-            height: rem(631px);
-            background-image: url("/src/assets/img/about-bg-1.png");
-            bottom: rem(-200px);
-            left: rem(0px);
-            z-index: -1;
+        @include media-breakpoint-down(xl) {
+            background-color: #fff;
         }
 
         &::before {
@@ -21,7 +14,9 @@
             height: rem(396px);
             background-image: url("/src/assets/img/about-bg-2.png");
             bottom: rem(-60px);
-            left: 40%;
+            left: 0;
+            right: 0;
+            margin: auto;
             background-size: contain;
             animation: rotate 60s normal linear infinite;
         }
@@ -32,29 +27,42 @@
         display: flex;
         background-color: #fff;
         border-radius: rem(14px);
-        padding: rem(70px);
         overflow: hidden;
         box-shadow: 0 rem(20px) rem(20px) 0 rgba(0 0 0 / 2%);
+        z-index: 2;
+
+        @include media-breakpoint-down(xl) {
+            display: block;
+        }
     }
 
     &__text-content {
         margin-right: 0;
         margin-left: auto;
-        max-width: rem(540px);
+        max-width: rem(730px);
+        padding: rem(70px);
+
+        @include media-breakpoint-down(xl) {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            padding-top: rem(50px);
+        }
     }
 
     &__heading {
         text-align: start;
     }
 
-
     &__img-wrap {
-        position: relative;
-        width: 100%;
-        height: rem(633px);
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 50vw;
+        max-width: rem(490px);
+        z-index: 2;
 
-        img {
-            height: 100%;
+        img{
             width: 100%;
         }
 
@@ -68,18 +76,49 @@
             left: rem(-80px);
             background-size: contain;
             animation: rotate 60s normal linear infinite;
+            z-index: -1;
+
+            @include media-breakpoint-down(xl) {
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 50vw;
+                height: 50vw;
+            }
+        }
+
+        @include media-breakpoint-down(xl) {
+            position: relative;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            max-width: 100%;
+            width: 100%;
+
+            img {
+                display: block;
+                max-width: 40vw;
+                margin: auto;
+            }
         }
     }
 
     &__list {
         @include unlist();
 
+        position: relative;
         display: flex;
         flex-direction: column;
         gap: rem(14px);
         list-style: none;
         font-weight: 500;
         padding-left: rem(15px);
+        z-index: 15;
     }
 
     &__item {
@@ -94,6 +133,21 @@
             background: var(--grad);
             top: rem(5px);
             left: rem(-15px);
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        left: 0;
+        bottom: rem(-310px);
+        z-index: -1;
+
+        img {
+            width: 40vw;
+        }
+
+        @include media-breakpoint-down(xl) {
+            bottom: -250px;
         }
     }
 }

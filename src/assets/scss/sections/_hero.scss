@@ -4,40 +4,43 @@
         padding-top: rem(100px);
         margin-bottom: rem(120px);
 
-        &::after {
-            position: absolute;
-            content: "";
-            background-image: url("/src/assets/img/hero-bg-l.png");
-            height: rem(418px);
-            width: rem(645px);
-            bottom: rem(-200px);
-            left: 0;
-            background-size: cover;
-        }
-
         &::before {
             position: absolute;
             content: "";
-            background-image: url("/src/assets/img/hero-bg-r.png");
+            background-image: url("/src/assets/img/hero-bg-m.png");
             height: rem(460px);
-            width: rem(664px);
-            bottom: rem(-200px);
-            right: 0;
+            width: 100vw;
+            bottom: rem(-60px);
             background-size: cover;
+            z-index: 3;
         }
 
         @include media-breakpoint-down(md) {
             display: block;
+            padding-top: rem(40px);
         }
     }
 
     &__content {
-        display: flex;
+        position: relative;
     }
 
     &__text-content {
         position: relative;
         z-index: 10;
+
+        @include media-breakpoint-down(xl) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        @include media-breakpoint-down(md) {
+            font-size: rem(14px);
+            line-height: rem(20px);
+            margin-bottom: rem(15px);
+        }
     }
 
     &__subheading {
@@ -49,28 +52,44 @@
         span {
             font-weight: 700;
         }
+
+        @include media-breakpoint-down(md) {
+            font-size: rem(14px);
+            line-height: rem(20px);
+        }
     }
 
     &__text {
         line-height: rem(24px);
         margin-bottom: rem(50px);
         max-width: rem(470px);
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: rem(30px);
+        }
     }
 
     &__btn {
         @extend %btn;
 
+        display: block;
+        max-width: rem(310px);
         margin-bottom: rem(130px);
         text-transform: uppercase;
+
+        @include media-breakpoint-down(xl) {
+            margin-bottom: rem(60px);
+        }
     }
 
     &__img-wrap {
-        position: relative;
-        width: 100%;
-        height: rem(780px);
+        position: absolute;
+        right: 0;
+        bottom: rem(-60px);
+        width: 50vw;
+        max-width: rem(490px);
 
-        img {
-            height: 100%;
+        img{
             width: 100%;
         }
 
@@ -81,10 +100,38 @@
             height: rem(760px);
             background-image: url("/src/assets/img/hero-img-2.png");
             bottom: rem(-20px);
-            right: rem(-70px);
+            right: rem(-100px);
             background-size: contain;
             animation: rotate 60s normal linear infinite;
             z-index: -1;
+
+            @include media-breakpoint-down(xl) {
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 70vw;
+                height: 70vw;
+            }
+        }
+
+        @include media-breakpoint-down(xl) {
+            position: relative;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            max-width: 100%;
+            width: 100%;
+
+            img {
+                display: block;
+                max-width: 40vw;
+                margin: auto;
+            }
         }
     }
 
@@ -123,6 +170,46 @@
             animation: pulse 2s linear infinite normal;
             animation-delay: 1s;
         }
+
+        @include media-breakpoint-down(xl) {
+            width: rem(90px);
+            height: rem(90px);
+            left: 30%;
+        }
+    }
+
+    &__bg-left {
+        position: absolute;
+        left: 0;
+        bottom: rem(-100px);
+        z-index: 3;
+
+        img {
+            width: 30vw;
+        }
+
+        @include media-breakpoint-down(xl) {
+            display: none;
+        }
+    }
+
+    &__bg-right {
+        position: absolute;
+        right: 0;
+        bottom: rem(-130px);
+        z-index: 3;
+
+        img {
+            width: 40vw;
+        }
+
+        @include media-breakpoint-down(xl) {
+            bottom: -140px;
+
+            img {
+                width: 70vw;
+            }
+        }
     }
 }
 
@@ -133,6 +220,11 @@
         display: flex;
         gap: rem(40px);
         list-style: none;
+
+        @include media-breakpoint-down(md) {
+            flex-direction: column;
+            gap: rem(14px);
+        }
     }
 
     &__item {
@@ -142,6 +234,20 @@
         svg {
             margin-bottom: rem(15px);
         }
+
+        @include media-breakpoint-down(xl) {
+            align-items: center;
+        }
+
+        @include media-breakpoint-down(md) {
+            text-align: start;
+            flex-direction: row;
+
+            svg {
+                margin-bottom: 0;
+                margin-right: rem(15px);
+            }
+        }
     }
 
     &__text {
@@ -150,6 +256,11 @@
 
         span {
             font-weight: 700;
+        }
+
+        @include media-breakpoint-down(md) {
+            line-height: rem(14px);
+            width: 100%;
         }
     }
 }

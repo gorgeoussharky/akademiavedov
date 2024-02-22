@@ -4,7 +4,7 @@
 
 <main class="frontpage">
 
-    <div class="hero">
+    <article class="hero">
 
         <div class="hero__wrap">
 
@@ -27,9 +27,9 @@
                             Кешава Ипек
                         </div>
 
-                        <button class="hero__btn">
+                        <a href="#trainings" class="hero__btn">
                             Выбрать обучение
-                        </button>
+                        </a>
 
                         <div class="hero__hero-advantages hero-advantages">
 
@@ -78,7 +78,7 @@
 
                         {{> picture class="hero__img" src="hero-img-1.png" }}
 
-                        <button class="hero__video-btn">
+                        <button class="hero__video-btn" data-modal="videoModal">
                             <svg width="30" height="32" viewBox="0 0 30 32" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -93,13 +93,21 @@
 
             </div>
 
+            <div class="hero__bg-wrap">
+
+                <div data-aos="fade-right">{{> picture class="hero__bg-left" src="hero-bg-l.png" }}</div>
+
+                <div data-aos="fade-left">{{> picture class="hero__bg-right" src="hero-bg-r.png" }}</div>
+
+            </div>
+
         </div>
 
-    </div>
+    </article>
 
     <div class="tasks">
 
-        <div class="tasks__wrap">
+        <div class="tasks__wrap" data-aos="fade-up">
 
             <div class="container">
 
@@ -113,7 +121,7 @@
 
                         <li class="tasks__tasks-item tasks-item">
 
-                            <a href="" class="tasks-item__wrap">
+                            <div href="" class="tasks-item__wrap">
 
                                 <div class="tasks-item__number">
                                     01
@@ -124,13 +132,13 @@
                                 <div class="tasks-item__text">кто стремится к гармонии в духовной и материальной
                                     сфере жизни</div>
 
-                            </a>
+                            </div>
 
                         </li>
 
                         <li class="tasks__tasks-item tasks-item">
 
-                            <a href="" class="tasks-item__wrap">
+                            <div href="" class="tasks-item__wrap">
 
                                 <div class="tasks-item__number">
                                     02
@@ -141,13 +149,13 @@
                                 <div class="tasks-item__text">кто ищет решения для различных ситуаций и проблем в
                                     своей жизни</div>
 
-                            </a>
+                            </div>
 
                         </li>
 
                         <li class="tasks__tasks-item tasks-item">
 
-                            <a href="" class="tasks-item__wrap">
+                            <div href="" class="tasks-item__wrap">
 
                                 <div class="tasks-item__number">
                                     03
@@ -158,7 +166,7 @@
                                 <div class="tasks-item__text">кто ценит ведические традиции и ищет наставничество в
                                     этой области</div>
 
-                            </a>
+                            </div>
 
                         </li>
 
@@ -168,11 +176,17 @@
 
             </div>
 
+            <div class="hero__bg-wrap">
+
+                <div data-aos="fade-right">{{> picture class="tasks__bg" src="tasks-bg-1.png" }}</div>
+
+            </div>
+
         </div>
 
     </div>
 
-    <div class="trainings">
+    <div class="trainings" id="trainings">
 
         <div class="trainings__wrap">
 
@@ -184,7 +198,7 @@
 
                     <ul class="trainings__list">
 
-                        <li class="trainings__trainings-item trainings-item">
+                        <li class="trainings__trainings-item trainings-item" data-aos="fade-up">
 
                             <a href="" class="trainings-item__link">
 
@@ -205,7 +219,7 @@
                             </a>
                         </li>
 
-                        <li class="trainings__trainings-item trainings-item">
+                        <li class="trainings__trainings-item trainings-item" data-aos="fade-up">
 
                             <a href="" class="trainings-item__link">
 
@@ -226,7 +240,7 @@
                             </a>
                         </li>
 
-                        <li class="trainings__trainings-item trainings-item">
+                        <li class="trainings__trainings-item trainings-item" data-aos="fade-up">
 
                             <a href="" class="trainings-item__link">
 
@@ -247,7 +261,7 @@
                             </a>
                         </li>
 
-                        <li class="trainings__trainings-item trainings-item">
+                        <li class="trainings__trainings-item trainings-item" data-aos="fade-up">
 
                             <a href="" class="trainings-item__link">
 
@@ -267,7 +281,7 @@
                             </a>
                         </li>
 
-                        <li class="trainings__trainings-item trainings-item">
+                        <li class="trainings__trainings-item trainings-item" data-aos="fade-up">
 
                             <a href="" class="trainings-item__link">
 
@@ -288,7 +302,7 @@
                             </a>
                         </li>
 
-                        <li class="trainings__trainings-item trainings-item">
+                        <li class="trainings__trainings-item trainings-item" data-aos="fade-up">
 
                             <a href="" class="trainings-item__link">
 
@@ -315,13 +329,19 @@
 
             </div>
 
+            <div class="trainings__bg-wrap">
+
+                <div data-aos="fade-left">{{> picture class="trainings__bg" src="trainings-bg-1.png" }}</div>
+
+            </div>
+
         </div>
 
     </div>
 
     <div class="reviews">
 
-        <div class="reviews__wrap">
+        <div class="reviews__wrap" data-aos="fade-up">
 
             <div class="container">
 
@@ -383,8 +403,7 @@
 
                 <div class="consultation__content">
 
-                    <div class="consultation__text-content">
-
+                    <div class="consultation__text-content" data-aos="fade-right">
 
                         <h2 class="consultation__heading">
                             Персональная консультация
@@ -442,7 +461,7 @@
 
                     </div>
 
-                    <div class="consultation__img-wrap">
+                    <div class="consultation__img-wrap" data-aos="fade-left">
 
                         {{> picture class="consultation__img" src="consultation-img-1.png" }}
 
@@ -458,17 +477,11 @@
 
     <div class="about">
 
-        <div class="about__wrap">
+        <div class="about__wrap" data-aos="fade-right">
 
             <div class="container">
 
                 <div class="about__content">
-
-                    <div class="about__img-wrap">
-
-                        {{> picture class="about__img" src="about-img-1.png" }}
-
-                    </div>
 
                     <div class="about__text-content">
 
@@ -514,7 +527,19 @@
 
                     </div>
 
+                    <div class="about__img-wrap" data-aos="fade-right">
+
+                        {{> picture class="about__img" src="about-img-1.png" }}
+
+                    </div>
+
                 </div>
+
+            </div>
+
+            <div class="about__bg-wrap">
+
+                <div data-aos="fade-right">{{> picture class="about__bg" src="about-bg-1.png" }}</div>
 
             </div>
 
@@ -524,7 +549,7 @@
 
     <div class="videos">
 
-        <div class="videos__wrap">
+        <div class="videos__wrap" data-aos="fade-up">
 
             <div class="container">
 
@@ -622,55 +647,50 @@
 
     <div class="preregistration">
 
-        <div class="preregistration__wrap">
+        <div class="preregistration__wrap" data-aos="fade-up">
 
             <div class="container">
 
                 <div class="preregistration__content">
 
+                    <div class="preregistration__content-wrap">
 
-
-                    <div class="preregistration__text">
-                        Оставь заявку, чтобы первым узнать о новом наборе
-                    </div>
-
-                    <h2 class="preregistration__heading">
-                        Предрегистрация на наставничество
-                    </h2>
-
-                    <div class="preregistration__forms-wrap">
-
-                        <div class="preregistration__form-group">
-                            <select name="select" class="preregistration__select">
-                                <option value="" disabled selected>Выберите курс</option>
-                                <option value="1">Управлять финансами может каждый</option>
-                                <option value="2">Основы здорового питания</option>
-                                <option value="3">Как изменить судьбу</option>
-                                <option value="4">Исследуйте тайны мира</option>
-                                <option value="5">Бхавагад-Гита</option>
-                                <option value="6">Высокочастотные медитативные практики</option>
-                            </select>
+                        <div class="preregistration__text">
+                            Оставь заявку, чтобы первым узнать о новом наборе
                         </div>
 
-                        <div class="preregistration__form-group">
-                            <input class="preregistration__form-control" type="tel" name="code"
-                                placeholder="Введите ваш телефон" />
+                        <h2 class="preregistration__heading">
+                            Предрегистрация на наставничество
+                        </h2>
+
+                        <div class="preregistration__forms-wrap">
+
+                            {{> ./form/select
+                            class="preregistration__select"
+                            label="Выберите курс"
+                            options='Управлять финансами может каждый, Основы здорового питания, Как изменить судьбу,
+                            Исследуйте тайны мира, Бхавагад-Гита, Высокочастотные медитативные практики'
+                            name="course" }}
+
+                            {{> ./form/input class="preregistration__form-control" type='tel' placeholder="Введите ваш телефон"
+                            options='1, 2'}}
+
+                            <button class="preregistration__btn">
+                                Оставить заявку
+                            </button>
+
                         </div>
 
-                        <button class="preregistration__btn">
-                            Оставить заявку
-                        </button>
+                        <div class="preregistration__form-group  preregistration__form-group--checkbox">
 
-                    </div>
+                            <input class="preregistration__control" name="" value="" type="checkbox"
+                                id="checkbox-policy" required checked>
 
-                    <div class="preregistration__form-group  preregistration__form-group--checkbox">
+                            <label for="checkbox-policy" class="preregistration__label">
+                                Нажимая кнопку вы соглашаетесь c условиями <a href="">политики конфиденциальности</a>
+                            </label>
+                        </div>
 
-                        <input class="preregistration__control" name="" value="" type="checkbox" id="checkbox-policy"
-                            required checked>
-
-                        <label for="checkbox-policy" class="preregistration__label">
-                            Нажимая кнопку вы соглашаетесь c условиями <a href="">политики конфиденциальности</a>
-                        </label>
                     </div>
 
                 </div>

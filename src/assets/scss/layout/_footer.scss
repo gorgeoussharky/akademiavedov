@@ -24,6 +24,11 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @include media-breakpoint-down(md) {
+            flex-direction: column;
+            gap: rem(30px);
+        }
     }
 
     &__policies {
@@ -39,6 +44,11 @@
                 color: var(--accent);
                 transition: 500ms;
             }
+        }
+
+        @include media-breakpoint-down(md) {
+            flex-direction: column;
+            gap: rem(25px);
         }
     }
 }

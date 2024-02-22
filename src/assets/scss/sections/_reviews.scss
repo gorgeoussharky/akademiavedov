@@ -42,19 +42,8 @@
 .reviews-item {
     &__video {
         border-radius: rem(14px);
-
-        video {
-            width: 100%;
-            height: rem(658px);
-            object-fit: cover;
-
-            @include media-breakpoint-down(xl) {
-                max-width: rem(290px);
-            }
-
-            @include media-breakpoint-down(md) {
-                max-width: rem(200px);
-            }
-        }
+        width: 100%;
+        max-height: rem(658px);
+        object-fit: cover;
     }
 }

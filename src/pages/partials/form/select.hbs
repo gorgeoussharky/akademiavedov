@@ -1,0 +1,30 @@
+<div class='{{class}} select'>
+    {{#uid label placeholder name type options }}
+    <div class='select__wrap'>
+        <label for='{{id}}' class='select__label'>
+            {{label}}
+        </label>
+        <select type='{{type}}' name="{{name}}" class='select__control select__control--sm' id='{{id}}'
+            placeholder='{{placeholder}}' {{#if required}} required {{/if}}>
+            <option disabled selected>{{label}}</option>
+            {{#each options}}
+            <option value="{{this}}">{{this}}</option>
+            {{/each}}
+        </select>
+
+        <button class="select__control select__control--lg">
+            {{ label }}
+        </button>
+
+        <div class="select__dropdown">
+            <ul class="select__list">
+                {{#each options}}
+                <li class="select__item">
+                    <button class="select__btn" data-value="{{this}}">{{this}}</button>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    {{/uid}}
+</div>

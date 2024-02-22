@@ -1,61 +1,76 @@
 .consultation {
     &__wrap {
         position: relative;
-        padding-bottom: rem(100px);
 
         &::before {
             position: absolute;
             content: "";
             background-image: url("/src/assets/img/consultation-bg-1.png");
-            height: rem(1030px);
+            height: rem(1000px);
             width: 100%;
-            bottom: rem(130px);
+            top: rem(-800px);
             left: 0;
-            background-size: cover;
-        }
-
-        &::after {
-            position: absolute;
-            content: "";
-            background-image: url("/src/assets/img/consultation-bg-2.png");
-            height: rem(460px);
-            width: rem(800px);
-            bottom: rem(-300px);
-            right: 0;
+            background-position: center;
+            background-repeat: no-repeat;
             background-size: cover;
         }
     }
 
     &__content {
-        display: flex;
+        position: relative;
     }
 
     &__text-content {
         position: relative;
         z-index: 10;
+
+        @include media-breakpoint-down(xl) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: rem(20px);
+        }
+
+        @include media-breakpoint-down(md) {
+            font-size: rem(14px);
+            line-height: rem(20px);
+        }
     }
 
     &__heading {
         text-align: start;
+
+        @include media-breakpoint-down(xl) {
+            text-align: center;
+        }
     }
 
     &__text {
         line-height: rem(24px);
         margin-bottom: rem(30px);
         max-width: rem(650px);
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: rem(20px);
+        }
     }
 
     &__btn {
         @extend %btn;
+
+        margin-bottom: rem(100px);
     }
 
     &__img-wrap {
-        position: relative;
-        width: 100%;
-        height: rem(1280px);
+        position: absolute;
+        right: 0;
+        bottom: rem(0px);
+        width: 50vw;
+        max-width: rem(418px);
+        z-index: 3;
 
-        img {
-            height: 100%;
+        img{
             width: 100%;
         }
 
@@ -65,10 +80,39 @@
             width: rem(640px);
             height: rem(640px);
             background-image: url("/src/assets/img/consultation-img-2.png");
-            bottom: rem(-160px);
-            right: rem(220px);
+            top: rem(20px);
+            right: rem(-100px);
             background-size: contain;
             animation: rotate 60s normal linear infinite;
+            z-index: -1;
+
+            @include media-breakpoint-down(xl) {
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 70vw;
+                height: 70vw;
+            }
+        }
+
+        @include media-breakpoint-down(xl) {
+            position: relative;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            max-width: 100%;
+            width: 100%;
+
+            img {
+                display: block;
+                max-width: 40vw;
+                margin: auto;
+            }
         }
     }
 }
@@ -81,6 +125,11 @@
         gap: rem(60px);
         list-style: none;
         margin-bottom: rem(50px);
+
+        @include media-breakpoint-down(md) {
+            flex-direction: column;
+            gap: rem(20px);
+        }
     }
 
     &__item {
@@ -90,6 +139,10 @@
         svg {
             margin-bottom: rem(15px);
         }
+
+        @include media-breakpoint-down(xl) {
+            align-items: center;
+        }
     }
 
     &__text {
@@ -98,6 +151,10 @@
 
         span {
             font-weight: 700;
+        }
+
+        @include media-breakpoint-down(md) {
+            font-size: rem(16px);
         }
     }
 }

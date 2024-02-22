@@ -14,4 +14,8 @@
         box-shadow: 0 rem(4px) 0 0 #6a0017, 0 rem(10px) rem(5px) 0 #6a0017;
         transition: 500ms;
     }
+
+    @include media-breakpoint-down(md) {
+        padding: rem(30px) rem(35px);
+    }
 }

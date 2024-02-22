@@ -3,36 +3,17 @@
         position: relative;
         z-index: 5;
         margin-bottom: rem(100px);
-
-        &::after {
-            position: absolute;
-            content: "";
-            background-image: url("/src/assets/img/tasks-bg-1.png");
-            width: rem(740px);
-            height: rem(660px);
-            bottom: rem(-350px);
-            left: 0;
-            z-index: -1;
-        }
-    }
-
-    &__heading {
-        font-family: "Marck Script", sans-serif;
-        color: var(--main);
-        font-weight: 400;
-        font-size: rem(60px);
-        line-height: rem(74px);
-        text-align: center;
-        margin-bottom: rem(20px);
     }
 
     &__list {
         @include unlist();
 
         display: flex;
+        position: relative;
         flex-wrap: wrap;
         justify-content: center;
-        gap: rem(30px);
+        gap: rem(20px);
+        z-index: 5;
     }
 
     &__tasks-item {
@@ -44,6 +25,25 @@
 
         @include media-breakpoint-down(sm) {
             width: 90%;
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        left: 0;
+        bottom: rem(-500px);
+        z-index: -1;
+
+        img {
+            width: 70vw;
+        }
+
+        @include media-breakpoint-down(xl) {
+            bottom: rem(-200px);
+        }
+
+        @include media-breakpoint-down(lg) {
+            bottom: rem(-140px);
         }
     }
 }
@@ -59,10 +59,11 @@
         border-radius: rem(15px);
         text-decoration: none;
         min-height: rem(280px);
-        padding: rem(40px);
+        padding: rem(30px);
         padding-top: rem(60px);
         gap: rem(14px);
         transition: 500ms;
+        cursor: pointer;
 
         &:hover {
             background-color: #fff;
@@ -72,8 +73,9 @@
         }
 
         @include media-breakpoint-down(xl) {
-            padding: rem(25px);
+            padding: rem(15px);
             padding-top: rem(60px);
+            gap: rem(10px);
         }
     }
 
@@ -99,5 +101,15 @@
     &__heading {
         font-weight: 700;
         font-size: rem(18px);
+
+        @include media-breakpoint-down(sm) {
+            font-size: rem(14px);
+        }
+    }
+
+    &__text {
+        @include media-breakpoint-down(sm) {
+            font-size: rem(14px);
+        }
     }
 }

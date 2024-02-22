@@ -16,12 +16,17 @@ const initReviewsCarousel = () => {
     new Swiper(list, {
         slidesPerView: 1,
         loop: true,
-        centeredSlides: true,
         spaceBetween: 30,
         breakpoints: {
-            600: {
+            1200: {
                 slidesPerView: 3,
-            }
+            },
+            600: {
+                slidesPerView: 2,
+            },
+            400: {
+                slidesPerView: 1,
+            },
         },
         pagination: {
             el: pagination,
@@ -44,7 +49,6 @@ const initVideosCarousel = () => {
     new Swiper(list, {
         slidesPerView: 1,
         loop: true,
-        centeredSlides: true,
         spaceBetween: 30,
         breakpoints: {
             1200: {

@@ -10,7 +10,9 @@
             height: rem(396px);
             background-image: url("/src/assets/img/preregistration-bg-2.png");
             bottom: rem(-60px);
-            left: 40%;
+            left: 0;
+            right: 0;
+            margin: auto;
             background-size: contain;
             animation: rotate 60s normal linear infinite;
         }
@@ -18,16 +20,18 @@
 
     &__content {
         position: relative;
-        display: grid;
-        grid-template-rows: (4, 1fr);
-        gap: rem(16px);
-        justify-content: center;
-        text-align: center;
-        background-color: #fff;
-        border-radius: rem(14px);
-        padding: rem(100px);
-        overflow: hidden;
         box-shadow: 0 rem(20px) rem(20px) 0 rgba(0 0 0 / 2%);
+        padding: rem(100px);
+        border-radius: rem(14px);
+        background-color: #fff;
+
+        @include media-breakpoint-down(xl) {
+            padding: rem(80px) rem(40px);
+        }
+
+        @include media-breakpoint-down(md) {
+            padding: rem(40px) rem(20px);
+        }
 
         &::before {
             position: absolute;
@@ -36,21 +40,30 @@
             height: rem(415px);
             background-image: url("/src/assets/img/preregistration-bg-1.png");
             bottom: 0;
-            right: rem(-60px);
+            right: 0;
             background-size: contain;
-            z-index: 1;
+            z-index: 4;
         }
     }
 
-    &__text-content {
-        margin-right: 0;
-        margin-left: auto;
-        max-width: rem(540px);
+    &__content-wrap {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: rem(16px);
+        z-index: 10;
+        text-align: center;
+        align-items: center;
     }
 
     &__text {
         font-size: rem(20px);
         line-height: rem(24px);
+
+        @include media-breakpoint-down(md) {
+            font-size: rem(14px);
+            line-height: rem(16px);
+        }
     }
 
     &__heading {
@@ -58,29 +71,26 @@
     }
 
     &__forms-wrap {
-        display: flex;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         gap: rem(30px);
-    }
 
-    &__select {
-        border: 1px solid #c9c9c9;
-        border-radius: rem(14px);
-        padding: rem(18px);
-        width: rem(280px);
-    }
-
-    &__form-control {
-        border: 1px solid #c9c9c9;
-        border-radius: rem(14px);
-        padding: rem(18px);
-        width: rem(270px);
+        @include media-breakpoint-down(lg) {
+            grid-template-columns: 1fr;
+            max-width: rem(420px);
+        }
     }
 
     &__btn {
         @extend %btn;
 
+        display: block;
         padding: rem(18px) rem(60px);
+
+        @include media-breakpoint-down(lg) {
+            margin: auto;
+            width: 100%;
+        }
     }
 
     &__form-group--checkbox {

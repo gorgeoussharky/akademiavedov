@@ -1,3 +1,6 @@
 import '../scss/main.scss'
 import './header'
 import './sliders'
+import './aos'
+import './select'
+import './modals'

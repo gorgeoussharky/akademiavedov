@@ -14,6 +14,7 @@ $container-max-widths: (
 @import "~bootstrap/scss/containers";
 @import "~sass-rem/rem";
 @import "swiper/scss";
+@import "aos/dist/aos";
 @import "mixins/utility";
 @import "base/variables";
 @import "base/fonts";
@@ -24,6 +25,8 @@ $container-max-widths: (
 @import "components/buttons";
 @import "components/modals";
 @import "components/socials";
+@import "components/select";
+@import "components/input";
 @import "layout/header";
 @import "layout/footer";
 @import "sections/hero";
@@ -34,4 +37,3 @@ $container-max-widths: (
 @import "sections/about";
 @import "sections/videos";
 @import "sections/preregistration";
-
