@@ -1,7 +1,7 @@
 .consultation {
     &__wrap {
         position: relative;
-        margin-bottom: rem(100px);
+        padding-bottom: rem(100px);
 
         &::before {
             position: absolute;
@@ -49,15 +49,14 @@
         @extend %btn;
     }
 
-    &__img {
-        &::after {
-            position: absolute;
-            content: "";
-            width: rem(960px);
-            height: rem(1280px);
-            background-image: url("/src/assets/img/consultation-img-1.png");
-            top: rem(-400px);
-            right: rem(100px);
+    &__img-wrap {
+        position: relative;
+        width: 100%;
+        height: rem(1280px);
+
+        img {
+            height: 100%;
+            width: 100%;
         }
 
         &::before {

@@ -23,6 +23,7 @@ $container-max-widths: (
 @import "base/keyframes";
 @import "components/buttons";
 @import "components/modals";
+@import "components/socials";
 @import "layout/header";
 @import "layout/footer";
 @import "sections/hero";
@@ -33,3 +34,4 @@ $container-max-widths: (
 @import "sections/about";
 @import "sections/videos";
 @import "sections/preregistration";
+

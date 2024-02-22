@@ -1,6 +1,6 @@
 .header {
     &__wrap {
-        margin: rem(25px) 0;
+        margin: rem(30px) 0;
         z-index: 100;
         position: relative;
     }
@@ -8,7 +8,6 @@
     &__topbar {
         display: flex;
         align-items: center;
-        margin-bottom: rem(50px);
     }
 
     &__logo {
@@ -37,6 +36,10 @@
         span {
             font-weight: 700;
         }
+
+        @include media-breakpoint-down(xl) {
+            display: none;
+        }
     }
 
     &__btn-wrap {
@@ -48,10 +51,30 @@
         position: relative;
         margin-left: auto;
         margin-right: 0;
+        background: #f1f1f1;
+        gap: rem(40px);
+
+        @include media-breakpoint-down(lg) {
+            display: none;
+            width: 100%;
+            height: 100svh;
+            position: fixed;
+            z-index: 99;
+            left: 0;
+            top: rem(100px);
+        }
     }
 
-    &__header-socials {
-        margin-right: 0;
+    &__header-menu--active {
+        display: block;
+
+        .header-menu__list {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            padding: rem(60px);
+            gap: rem(25px);
+        }
     }
 }
 
@@ -62,11 +85,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: rem(44px);
-
-        @include media-breakpoint-down(lg) {
-            display: none;
-        }
+        gap: rem(40px);
     }
 
     &__link {
@@ -82,85 +101,6 @@
     }
 }
 
-.header-socials {
-    &__list {
-        @include unlist();
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: rem(12px);
-        margin-left: rem(40px);
-        margin-right: 0;
-
-        @include media-breakpoint-down(lg) {
-            display: none;
-        }
-    }
-
-    &__link {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        background: #f9ecef;
-        width: rem(24px);
-        height: rem(24px);
-        transition: 500ms;
-
-        &:hover {
-            background: #c5425e;
-            transition: 500ms;
-
-            svg path {
-                fill: #fff;
-            }
-        }
-    }
-}
-
-.mobile-menu {
-    display: none;
-    width: 100%;
-    height: 100svh;
-    position: fixed;
-    z-index: 99;
-    left: 0;
-    top: rem(100px);
-
-    &--active {
-        display: block;
-    }
-
-    &__list {
-        padding: rem(30px);
-        padding-bottom: rem(180px);
-        margin-bottom: 0;
-        list-style: none;
-        height: 100%;
-        width: 100%;
-        overflow-y: scroll;
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        font-size: rem(20px);
-
-        &::after {
-            position: absolute;
-            content: "";
-            width: 100%;
-            height: rem(1340px);
-            z-index: -2;
-            top: 0;
-            left: 0;
-        }
-    }
-
-    &__link {
-        text-decoration: none;
-    }
-}
-
 .header__menu-toggle {
     display: none;
     flex-direction: column;
@@ -169,7 +109,7 @@
     height: rem(54px);
     justify-content: center;
     padding: rem(2px) rem(15px);
-    margin-left: rem(20px);
+    margin-left: auto;
     margin-right: 0;
 
     @include media-breakpoint-down(lg) {
@@ -181,7 +121,7 @@
         width: rem(26px);
         height: rem(2px);
         background: var(--accent);
-        transition: 250ms;
+        transition: 500ms;
 
         &:first-of-type {
             transform: rotate(0);
@@ -197,7 +137,7 @@
     }
 
     &--active {
-        transition: 250ms;
+        transition: 500ms;
 
         span {
             &:first-of-type {

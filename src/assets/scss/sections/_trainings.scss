@@ -58,7 +58,6 @@
         display: block;
         height: rem(310px);
         width: 100%;
-        max-width: 100%;
 
         img {
             border-radius: rem(14px);
@@ -72,7 +71,7 @@
         }
     }
 
-    &__description {
+    &__body {
         text-align: center;
         padding: rem(36px);
         min-height: rem(210px);

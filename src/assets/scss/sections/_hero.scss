@@ -1,18 +1,33 @@
 .hero {
     &__wrap {
         position: relative;
-        margin-top: rem(120px);
+        padding-top: rem(100px);
         margin-bottom: rem(120px);
 
         &::after {
             position: absolute;
             content: "";
-            background-image: url("/src/assets/img/hero-bg-1.png");
-            height: rem(460px);
-            width: 100%;
+            background-image: url("/src/assets/img/hero-bg-l.png");
+            height: rem(418px);
+            width: rem(645px);
             bottom: rem(-200px);
             left: 0;
             background-size: cover;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            background-image: url("/src/assets/img/hero-bg-r.png");
+            height: rem(460px);
+            width: rem(664px);
+            bottom: rem(-200px);
+            right: 0;
+            background-size: cover;
+        }
+
+        @include media-breakpoint-down(md) {
+            display: block;
         }
     }
 
@@ -49,15 +64,14 @@
         text-transform: uppercase;
     }
 
-    &__img {
-        &::after {
-            position: absolute;
-            content: "";
-            width: rem(838px);
-            height: rem(884px);
-            background-image: url("/src/assets/img/hero-img-1.png");
-            bottom: rem(-100px);
-            right: rem(200px);
+    &__img-wrap {
+        position: relative;
+        width: 100%;
+        height: rem(780px);
+
+        img {
+            height: 100%;
+            width: 100%;
         }
 
         &::before {
@@ -67,22 +81,25 @@
             height: rem(760px);
             background-image: url("/src/assets/img/hero-img-2.png");
             bottom: rem(-20px);
-            right: rem(80px);
+            right: rem(-70px);
             background-size: contain;
             animation: rotate 60s normal linear infinite;
+            z-index: -1;
         }
     }
 
     &__video-btn {
-        position: relative;
+        position: absolute;
         background: var(--grad);
         width: rem(140px);
         height: rem(140px);
         border-radius: 50%;
         z-index: 10;
         box-shadow: 0 0 rem(10px) 0 #6a0017;
-        margin-left: rem(150px);
-        margin-top: rem(200px);
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
 
         &::before {
             position: absolute;
@@ -114,7 +131,7 @@
         @include unlist();
 
         display: flex;
-        gap: rem(60px);
+        gap: rem(40px);
         list-style: none;
     }
 

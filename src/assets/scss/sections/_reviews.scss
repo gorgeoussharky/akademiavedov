@@ -41,11 +41,12 @@
 
 .reviews-item {
     &__video {
+        border-radius: rem(14px);
+
         video {
-            border-radius: rem(14px);
-            max-width: rem(370px);
-            max-height: rem(657px);
-            background-size: contain;
+            width: 100%;
+            height: rem(658px);
+            object-fit: cover;
 
             @include media-breakpoint-down(xl) {
                 max-width: rem(290px);

@@ -1,0 +1,30 @@
+.socials {
+    &__list {
+        @include unlist();
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: rem(12px);
+    }
+
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background: #f9ecef;
+        width: rem(24px);
+        height: rem(24px);
+        transition: 500ms;
+
+        &:hover {
+            background: #c5425e;
+            transition: 500ms;
+
+            svg path {
+                fill: #fff;
+            }
+        }
+    }
+}

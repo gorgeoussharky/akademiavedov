@@ -1,3 +1,44 @@
 .footer {
-    background-color: transparent;
+    &__wrap {
+        position: relative;
+        padding: rem(40px) 0;
+        background-color: #fff;
+
+        &::before {
+            position: absolute;
+            content: "";
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            left: 0;
+            top: rem(-100px);
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("/src/assets/img/footer-bg.png");
+            z-index: -1;
+        }
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__policies {
+        display: flex;
+        gap: rem(40px);
+
+        a {
+            font-size: rem(10px);
+            font-weight: 300;
+            transition: 500ms;
+
+            &:hover {
+                color: var(--accent);
+                transition: 500ms;
+            }
+        }
+    }
 }

@@ -49,7 +49,7 @@
 }
 
 .tasks-item {
-    &__link {
+    &__wrap {
         position: relative;
         display: flex;
         flex-direction: column;
@@ -89,7 +89,9 @@
             width: rem(1px);
             height: rem(60px);
             top: 0;
-            left: 50%;
+            left: 0;
+            right: 0;
+            margin: auto;
             background-color: var(--accent);
         }
     }

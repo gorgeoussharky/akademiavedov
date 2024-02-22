@@ -18,8 +18,9 @@
 
     &__content {
         position: relative;
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-rows: (4, 1fr);
+        gap: rem(16px);
         justify-content: center;
         text-align: center;
         background-color: #fff;
@@ -31,21 +32,14 @@
         &::before {
             position: absolute;
             content: "";
-            width: rem(985px);
+            width: rem(993px);
             height: rem(415px);
             background-image: url("/src/assets/img/preregistration-bg-1.png");
-            top: rem(-60px);
+            bottom: 0;
             right: rem(-60px);
             background-size: contain;
             z-index: 1;
         }
-    }
-
-    &__content-wrap {
-        display: flex;
-        flex-direction: column;
-        gap: rem(16px);
-        z-index: 3;
     }
 
     &__text-content {
