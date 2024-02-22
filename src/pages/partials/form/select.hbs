@@ -4,8 +4,8 @@
         <label for='{{id}}' class='select__label'>
             {{label}}
         </label>
-        <select type='{{type}}' name="{{name}}" class='select__control select__control--sm' id='{{id}}'
-            placeholder='{{placeholder}}' {{#if required}} required {{/if}}>
+        <select  name="{{name}}" class='select__control select__control--sm' id='{{id}}'
+          {{#if required}} required {{/if}}>
             <option disabled selected>{{label}}</option>
             {{#each options}}
             <option value="{{this}}">{{this}}</option>

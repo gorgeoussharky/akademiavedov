@@ -82,7 +82,7 @@
         @include media-breakpoint-down(lg) {
             display: flex;
             flex-direction: column;
-            justify-content: start;
+            justify-content: flex-start;
             padding: rem(60px);
             gap: rem(25px);
         }

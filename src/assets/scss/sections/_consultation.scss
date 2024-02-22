@@ -5,7 +5,7 @@
         &::before {
             position: absolute;
             content: "";
-            background-image: url("/src/assets/img/consultation-bg-1.png");
+            background-image: url("/src/assets/img/consultation-bg-1.png?as=webp");
             height: rem(1000px);
             width: 100%;
             top: rem(-800px);
@@ -87,7 +87,7 @@
             content: "";
             width: rem(640px);
             height: rem(640px);
-            background-image: url("/src/assets/img/consultation-img-2.png");
+            background-image: url("/src/assets/img/consultation-img-2.png?as=webp");
             top: rem(20px);
             right: rem(-100px);
             background-size: contain;

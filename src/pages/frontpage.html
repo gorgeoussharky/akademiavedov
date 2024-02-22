@@ -76,7 +76,7 @@
 
                     <div class="hero__img-wrap">
 
-                        {{> picture class="hero__img" src="hero-img-1.png" }}
+                        {{> picture class="hero__img" unlazy=true src="hero-img-1.png" }}
 
                         <button class="hero__video-btn" data-video="https://www.youtube.com/embed/_JUBzbsIEII?si=DkiawRhYnn1DiMOJ" data-modal="videoModal">
                             <svg width="30" height="32" viewBox="0 0 30 32" fill="none"
@@ -121,7 +121,7 @@
 
                         <li class="tasks__tasks-item tasks-item">
 
-                            <div href="" class="tasks-item__wrap">
+                            <div class="tasks-item__wrap">
 
                                 <div class="tasks-item__number">
                                     01
@@ -138,7 +138,7 @@
 
                         <li class="tasks__tasks-item tasks-item">
 
-                            <div href="" class="tasks-item__wrap">
+                            <div class="tasks-item__wrap">
 
                                 <div class="tasks-item__number">
                                     02
@@ -155,7 +155,7 @@
 
                         <li class="tasks__tasks-item tasks-item">
 
-                            <div href="" class="tasks-item__wrap">
+                            <div class="tasks-item__wrap">
 
                                 <div class="tasks-item__number">
                                     03
@@ -568,7 +568,7 @@
                             Исследуйте тайны мира, Бхавагад-Гита, Высокочастотные медитативные практики'
                             name="course" }}
 
-                            {{> ./form/input class="preregistration__input" type='tel' placeholder="Введите ваш телефон"
+                            {{> ./form/input name="tel" required=true class="preregistration__input" type='tel' placeholder="Введите ваш телефон"
                             options='1, 2'}}
 
                             <button class="preregistration__btn">
