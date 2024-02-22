@@ -18,10 +18,10 @@ const initReviewsCarousel = () => {
         loop: true,
         spaceBetween: 30,
         breakpoints: {
-            1200: {
-                slidesPerView: 3,
+            500: {
+                slidesPerView: 2,
             },
-            600: {
+            700: {
                 slidesPerView: 3,
             },
         },

@@ -1,4 +1,16 @@
 .trainings {
+    &__heading {
+        @extend h2;
+
+        margin-bottom: rem(24px);
+
+        @include media-breakpoint-down(lg) {
+            max-width: rem(500px);
+            margin: auto;
+            margin-bottom: rem(24px);
+        }
+    }
+
     &__wrap {
         position: relative;
         margin-bottom: rem(100px);

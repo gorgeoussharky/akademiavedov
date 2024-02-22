@@ -67,7 +67,7 @@
         max-width: rem(490px);
         z-index: 2;
 
-        img{
+        img {
             width: 100%;
         }
 
@@ -83,6 +83,11 @@
             animation: rotate 60s normal linear infinite;
             z-index: -1;
 
+            @include media-breakpoint-down(xl) {
+                width: 60vw;
+                height: 60vw;
+            }
+
             @include media-breakpoint-down(lg) {
                 left: 0;
                 right: 0;
@@ -91,9 +96,18 @@
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: contain;
-                width: 50vw;
-                height: 50vw;
+                width: 60vw;
+                height: 60vw;
             }
+
+            @include media-breakpoint-down(sm) {
+                width: 85vw;
+                height: 85vw;
+            }
+        }
+
+        @include media-breakpoint-down(xl) {
+            width: 45vw;
         }
 
         @include media-breakpoint-down(lg) {
@@ -107,8 +121,14 @@
 
             img {
                 display: block;
-                max-width: 40vw;
+                max-width: 50vw;
                 margin: auto;
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+            img {
+                max-width: 80%;
             }
         }
     }

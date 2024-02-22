@@ -3,6 +3,17 @@
         position: relative;
         z-index: 6;
         margin-bottom: rem(140px);
+        overflow: hidden;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: rem(60px);
+        }
+    }
+
+    &__list-wrap {
+        @include media-breakpoint-down(sm) {
+            overflow: visible;
+        }
     }
 
     &__list {

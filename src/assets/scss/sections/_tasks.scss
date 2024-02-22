@@ -3,6 +3,10 @@
         position: relative;
         z-index: 5;
         margin-bottom: rem(100px);
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: rem(60px);
+        }
     }
 
     &__list {

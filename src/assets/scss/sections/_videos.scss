@@ -42,19 +42,9 @@
 .videos-item {
     &__img-wrap {
         position: relative;
-    }
-
-    &__img {
-        display: block;
+        border-radius: rem(14px);
         height: rem(200px);
-        width: 100%;
-
-        img {
-            border-radius: rem(14px);
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+        overflow: hidden;
 
         @include media-breakpoint-down(lg) {
             height: rem(160px);
@@ -62,6 +52,28 @@
 
         @include media-breakpoint-down(md) {
             height: rem(200px);
+        }
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            opacity: 0.5;
+            position: absolute;
+            inset: 0;
+        }
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
 
@@ -74,6 +86,7 @@
         border-radius: 50%;
         inset: 0;
         margin: auto;
+        z-index: 10;
 
         svg {
             max-width: 40%;

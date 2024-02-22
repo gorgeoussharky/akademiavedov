@@ -64,6 +64,10 @@
         @extend %btn;
 
         margin-bottom: rem(100px);
+
+        @include media-breakpoint-down(lg) {
+            margin-bottom: rem(70px);
+        }
     }
 
     &__img-wrap {
@@ -101,6 +105,11 @@
                 width: 70vw;
                 height: 70vw;
             }
+
+            @include media-breakpoint-down(sm) {
+                width: 85vw;
+                height: 85vw;
+            }
         }
 
         @include media-breakpoint-down(xl) {
@@ -121,6 +130,12 @@
                 display: block;
                 max-width: 40vw;
                 margin: auto;
+            }
+        }
+
+        @include media-breakpoint-down(sm) {
+            img {
+                max-width: 80%;
             }
         }
     }

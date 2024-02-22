@@ -2,10 +2,6 @@ html {
     overflow-x: hidden;
 }
 
-.frontpage {
-    overflow: hidden;
-}
-
 :root {
     --main: #d5627b;
     --accent: #d4133d;
@@ -35,5 +31,5 @@ body {
 
 .container {
     width: 100%;
-    max-width: rem(1170px);
+    max-width: rem(1200px);
 }

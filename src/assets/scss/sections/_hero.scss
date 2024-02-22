@@ -10,15 +10,23 @@
             content: "";
             background: linear-gradient(0deg, #f1f1f1 20%, transparent 100%);
             height: rem(460px);
-            width: 100vw;
+            width: 100%;
             bottom: rem(-60px);
-            background-size: cover;
             z-index: 3;
+
+            @include media-breakpoint-down(sm) {
+                height: rem(240px);
+                background: linear-gradient(0deg, #f1f1f1 30%, transparent 100%);
+            }
         }
 
-        @include media-breakpoint-down(md) {
-            display: block;
+        @include media-breakpoint-down(lg) {
             padding-top: rem(40px);
+            margin-bottom: rem(40px);
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding-top: 0;
         }
     }
 
@@ -81,6 +89,12 @@
         @include media-breakpoint-down(lg) {
             margin-bottom: rem(60px);
         }
+
+        @include media-breakpoint-down(sm) {
+            max-width: 100%;
+            width: 100%;
+            margin-bottom: rem(42px);
+        }
     }
 
     &__img-wrap {
@@ -124,6 +138,11 @@
             }
         }
 
+        @include media-breakpoint-down(xl) {
+            right: rem(-100px);
+            width: 50vw;
+        }
+
         @include media-breakpoint-down(lg) {
             position: relative;
             left: 0;
@@ -154,6 +173,11 @@
         bottom: 0;
         margin: auto;
 
+        svg {
+            width: 30%;
+            height: 30%;
+        }
+
         &::before {
             position: absolute;
             content: "";
@@ -180,7 +204,15 @@
         @include media-breakpoint-down(lg) {
             width: rem(90px);
             height: rem(90px);
-            left: 30%;
+            left: 28%;
+            top: rem(-120px);
+        }
+
+        @include media-breakpoint-down(sm) {
+            left: 15%;
+            width: rem(70px);
+            height: rem(70px);
+            top: rem(-100px);
         }
     }
 
@@ -216,6 +248,10 @@
                 width: 70vw;
             }
         }
+    }
+
+    &__hero-advantages {
+        margin-bottom: rem(24px);
     }
 }
 
