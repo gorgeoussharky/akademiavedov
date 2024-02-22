@@ -43,6 +43,11 @@
         padding: rem(70px);
 
         @include media-breakpoint-down(xl) {
+            width: 50vw;
+            padding: rem(70px) rem(30px);
+        }
+
+        @include media-breakpoint-down(lg) {
             width: 100%;
             margin: 0;
             padding: 0;
@@ -78,7 +83,7 @@
             animation: rotate 60s normal linear infinite;
             z-index: -1;
 
-            @include media-breakpoint-down(xl) {
+            @include media-breakpoint-down(lg) {
                 left: 0;
                 right: 0;
                 bottom: 0;
@@ -91,7 +96,7 @@
             }
         }
 
-        @include media-breakpoint-down(xl) {
+        @include media-breakpoint-down(lg) {
             position: relative;
             left: 0;
             right: 0;
@@ -146,7 +151,7 @@
             width: 40vw;
         }
 
-        @include media-breakpoint-down(xl) {
+        @include media-breakpoint-down(lg) {
             bottom: -250px;
         }
     }

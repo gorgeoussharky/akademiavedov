@@ -78,7 +78,7 @@
         margin-bottom: rem(130px);
         text-transform: uppercase;
 
-        @include media-breakpoint-down(xl) {
+        @include media-breakpoint-down(lg) {
             margin-bottom: rem(60px);
         }
     }
@@ -87,7 +87,7 @@
         position: absolute;
         right: 0;
         bottom: rem(-60px);
-        width: 50vw;
+        width: 45vw;
         max-width: rem(490px);
 
         img {
@@ -105,6 +105,11 @@
             background-size: contain;
             animation: rotate 60s normal linear infinite;
             z-index: -1;
+
+            @include media-breakpoint-down(xl) {
+                width: 65vw;
+                height: 65vw;
+            }
 
             @include media-breakpoint-down(lg) {
                 left: 0;
@@ -130,7 +135,7 @@
 
             img {
                 display: block;
-                max-width: 40vw;
+                max-width: 45vw;
                 margin: auto;
             }
         }

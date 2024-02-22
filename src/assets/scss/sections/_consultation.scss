@@ -24,7 +24,7 @@
         position: relative;
         z-index: 10;
 
-        @include media-breakpoint-down(xl) {
+        @include media-breakpoint-down(lg) {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -41,7 +41,7 @@
     &__heading {
         text-align: start;
 
-        @include media-breakpoint-down(xl) {
+        @include media-breakpoint-down(lg) {
             text-align: center;
         }
     }
@@ -50,6 +50,10 @@
         line-height: rem(24px);
         margin-bottom: rem(30px);
         max-width: rem(650px);
+
+        @include media-breakpoint-down(xl) {
+            max-width: rem(530px);
+        }
 
         @include media-breakpoint-down(md) {
             margin-bottom: rem(20px);
@@ -86,7 +90,7 @@
             animation: rotate 60s normal linear infinite;
             z-index: -1;
 
-            @include media-breakpoint-down(xl) {
+            @include media-breakpoint-down(lg) {
                 left: 0;
                 right: 0;
                 bottom: 0;
@@ -100,6 +104,11 @@
         }
 
         @include media-breakpoint-down(xl) {
+            right: rem(-50px);
+            width: 45vw;
+        }
+
+        @include media-breakpoint-down(lg) {
             position: relative;
             left: 0;
             right: 0;
@@ -126,9 +135,12 @@
         list-style: none;
         margin-bottom: rem(50px);
 
+        @include media-breakpoint-down(xl) {
+            gap: rem(20px);
+        }
+
         @include media-breakpoint-down(md) {
             flex-direction: column;
-            gap: rem(20px);
         }
     }
 
@@ -140,7 +152,7 @@
             margin-bottom: rem(15px);
         }
 
-        @include media-breakpoint-down(xl) {
+        @include media-breakpoint-down(lg) {
             align-items: center;
         }
     }
@@ -151,6 +163,10 @@
 
         span {
             font-weight: 700;
+        }
+
+        @include media-breakpoint-down(xl) {
+            width: rem(175px);
         }
 
         @include media-breakpoint-down(md) {

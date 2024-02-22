@@ -46,7 +46,7 @@
 
     &__img {
         display: block;
-        height: rem(208px);
+        height: rem(200px);
         width: 100%;
 
         img {
@@ -56,8 +56,12 @@
             object-fit: cover;
         }
 
-        @include media-breakpoint-down(sm) {
-            height: 100%;
+        @include media-breakpoint-down(lg) {
+            height: rem(160px);
+        }
+
+        @include media-breakpoint-down(md) {
+            height: rem(200px);
         }
     }
 
