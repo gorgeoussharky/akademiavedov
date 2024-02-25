@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 import { parse } from 'path'
 
+import sizeOf from 'image-size'
+
 interface FileFormat {
     base?: string
     webp?: string
@@ -16,11 +18,16 @@ const img = (
             webp: string | undefined
             avif: string | undefined
             unlazy: boolean | undefined
+            width: number | undefined
+            height: number | undefined
         }) => () => void
     },
 ) => {
     const srcName = src
     const { name, ext, dir } = parse(srcName)
+    const dimensions = sizeOf(`src/assets/img/${dir ? `${dir}/${name}` : `${name}`}${ext}`)
+
+    const { width, height } = dimensions 
 
     const file: FileFormat = {}
 
@@ -46,7 +53,7 @@ const img = (
 
     const { base, webp, avif } = file
 
-    return block.fn({ base, webp, avif, unlazy })
+    return block.fn({ base, webp, avif, unlazy, width, height })
 }
 
 export default img

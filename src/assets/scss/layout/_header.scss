@@ -14,13 +14,13 @@
         display: flex;
         text-decoration: none;
         align-items: center;
+        gap: rem(20px);
     }
 
     &__logo-img {
         width: 100%;
         max-width: rem(140px);
-        height: rem(34px);
-        margin-right: rem(20px);
+        margin-bottom: 6px;
 
         img {
             width: 100%;
@@ -30,8 +30,8 @@
     }
 
     &__logo-text {
-        font-size: rem(10px);
-        max-width: rem(156px);
+        font-size: rem(12px);
+        max-width: rem(180px);
 
         span {
             font-weight: 700;

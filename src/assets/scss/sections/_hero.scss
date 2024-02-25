@@ -100,12 +100,14 @@
     &__img-wrap {
         position: absolute;
         right: 0;
-        bottom: rem(-60px);
+        bottom: rem(-80px);
         width: 45vw;
-        max-width: rem(490px);
+        max-width: rem(480px);
+        max-height: rem(760px);
 
         img {
             width: 100%;
+            height: auto;
         }
 
         &::before {
@@ -158,6 +160,10 @@
                 margin: auto;
             }
         }
+    }
+
+    &__img {
+        display: block;
     }
 
     &__video-btn {
@@ -294,7 +300,7 @@
 
     &__text {
         line-height: rem(20px);
-        width: rem(200px);
+        max-width: rem(220px);
 
         span {
             font-weight: 700;

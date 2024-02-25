@@ -42,7 +42,9 @@
                                     </svg>
 
                                     <div class="hero-advantages__text">
-                                        <span>Разбираемся</span> в своих потребностях
+                                        <span>Разбираемся</span>
+                                        <br>
+                                        в своих потребностях
                                     </div>
                                 </li>
 
@@ -53,7 +55,8 @@
                                     </svg>
 
                                     <div class="hero-advantages__text">
-                                        <span>Убираем</span> барьеры на пути развития
+                                        <span>Убираем</span> барьеры
+                                        <br> на пути развития
                                     </div>
                                 </li>
 
@@ -64,7 +67,8 @@
                                     </svg>
 
                                     <div class="hero-advantages__text">
-                                        <span>Достигаем</span> поставленных целей в кратчайшие сроки
+                                        <span>Достигаем</span> поставленных
+                                        <br> целей в кратчайшие сроки
                                     </div>
                                 </li>
 
@@ -74,7 +78,7 @@
 
                     </div>
 
-                    <div class="hero__img-wrap">
+                    <div class="hero__img-wrap" data-aos="fade-left">
 
                         {{> picture class="hero__img" unlazy=true src="hero-img-1.png" }}
 
@@ -95,9 +99,9 @@
 
             <div class="hero__bg-wrap">
 
-                <div data-aos="fade-right">{{> picture class="hero__bg-left" src="hero-bg-l.png" }}</div>
+                <div data-aos="fade-right" data-aos-anchor=".hero">{{> picture unlazy=true class="hero__bg-left" src="hero-bg-l.png" }}</div>
 
-                <div data-aos="fade-left">{{> picture class="hero__bg-right" src="hero-bg-r.png" }}</div>
+                <div data-aos="fade-left" data-aos-anchor=".hero">{{> picture unlazy=true class="hero__bg-right" src="hero-bg-r.png" }}</div>
 
             </div>
 
@@ -194,14 +198,14 @@
 
                 <div class="trainings__content">
 
-                    <h2 class="trainings__heading">Решаем ваши проблемы с Кешава Ипек</h2>
+                    <h2 class="trainings__heading" data-aos="fade-up">Решаем ваши проблемы с Кешава Ипек</h2>
 
                     <ul class="trainings__list">
 
                         {{#each data.trainings}}
                         <li class="trainings__trainings-item trainings-item" data-aos="fade-up">
                             <section class="trainings-item__wrap">
-                                <a href="" class="trainings-item__link">
+                                <a href="{{this.url}}" target="_blank" rel="nofollow" class="trainings-item__link">
 
                                     {{> picture class="trainings-item__img" src=this.img }}
     
@@ -239,45 +243,32 @@
 
     <article class="reviews" id="reviews">
 
-        <div class="reviews__wrap" data-aos="fade-up">
+        <div class="reviews__wrap">
 
             <div class="container">
 
                 <div class="reviews__content">
 
-                    <h2 class="reviews__heading">Отзывы и результаты наставничества</h2>
+                    <h2 class="reviews__heading"  data-aos="fade-up">Отзывы и результаты наставничества</h2>
 
-                    <div class="reviews__list-wrap swiper">
+                    <div class="reviews__list-wrap swiper" >
 
                         <ul class="reviews__list swiper-wrapper">
 
-                            {{#range 2}}
+                            {{#each data.videos}}
 
                             <li class="reviews__reviews-item reviews-item swiper-slide">
 
-                                <video class="reviews-item__video" src="" poster="@assets/img/reviews-poster-img-1.jpg">
-
-                                </video>
-
-                            </li>
-
-                            <li class="reviews__reviews-item reviews-item swiper-slide">
-
-                                <video class="reviews-item__video" src="" poster="@assets/img/reviews-poster-img-2.jpg">
-
-                                </video>
+                                <div>
+                                    {{#video this.src}}
+                                    <video class="reviews-item__video" controls preload="metadata" src="{{url}}">
+                                    </video>
+                                    {{/video}}
+                                </div>
 
                             </li>
 
-                            <li class="reviews__reviews-item reviews-item swiper-slide">
-
-                                <video class="reviews-item__video" src="" poster="@assets/img/reviews-poster-img-3.jpg">
-
-                                </video>
-
-                            </li>
-
-                            {{/range}}
+                            {{/each}}
 
                         </ul>
 
@@ -579,11 +570,11 @@
 
                         <div class="preregistration__form-group  preregistration__form-group--checkbox">
 
-                            <input class="preregistration__control" name="" value="" type="checkbox"
+                            <input class="preregistration__control" name="policy" type="checkbox"
                                 id="checkbox-policy" required checked>
 
                             <label for="checkbox-policy" class="preregistration__label">
-                                Нажимая кнопку вы соглашаетесь c условиями <a href="">политики конфиденциальности</a>
+                                Нажимая кнопку вы соглашаетесь c условиями <a href="policy.pdf">политики конфиденциальности</a>
                             </label>
                         </div>
 

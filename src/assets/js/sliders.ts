@@ -1,4 +1,3 @@
-/* eslint-disable no-new */
 import Swiper from 'swiper'
 import { Pagination } from 'swiper/modules'
 
@@ -16,6 +15,7 @@ const initReviewsCarousel = () => {
     new Swiper(list, {
         slidesPerView: 1.5,
         loop: true,
+        noSwipingClass: 'swiper-no-swiping',
         spaceBetween: 30,
         breakpoints: {
             500: {
@@ -24,6 +24,14 @@ const initReviewsCarousel = () => {
             700: {
                 slidesPerView: 3,
             },
+        },
+        on: {
+            touchStart() {
+                list.classList.add('is-swiping')
+            },
+            touchEnd() {
+                list.classList.remove('is-swiping')
+            }
         },
         pagination: {
             el: pagination,
