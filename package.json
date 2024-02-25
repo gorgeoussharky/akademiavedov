@@ -39,7 +39,7 @@
         "html-webpack-plugin": "^5.5.3",
         "image-minimizer-webpack-plugin": "^3.8.3",
         "image-size": "^1.1.1",
-        "mini-css-extract-plugin": "^2.7.6",
+        "mini-css-extract-plugin": "^2.8.0",
         "nanoid": "^5.0.2",
         "postcss": "^8.4.31",
         "postcss-loader": "^7.3.3",
