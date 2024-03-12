@@ -1,10 +1,51 @@
 <dialog class="modal" id="videoModal">
 
     <div class="modal__content">
-        <iframe width="560" height="315" src=""
-            title="YouTube video player" 
+        <iframe width="560" height="315" src="" title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
+    </div>
+
+</dialog>
+
+<dialog class="modal" id="signupModal">
+
+    <div class="modal__wrap">
+
+        <div class="modal__content">
+
+            <span class="modal__close">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g opacity="0.5">
+                        <path d="M1 1L17 17" stroke="#232953" stroke-width="2" stroke-linecap="round" />
+                        <path d="M17 1L1 17" stroke="#232953" stroke-width="2" stroke-linecap="round" />
+                    </g>
+                </svg>
+            </span>
+
+            <div class="modal__heading">
+                Запись на консультацию
+            </div>
+
+            <div class="modal__forms-wrap">
+
+                {{> ./form/input name="name" required=true class="modal__input" type='name' placeholder="Введите ваше имя"
+                options='1, 2'}}
+
+                {{> ./form/input name="tel" required=true class="modal__input" type='tel' placeholder="Введите ваш телефон"
+                options='1, 2'}}
+
+            </div>
+
+            {{> ./form/textarea name="text" required=true class="modal__textarea" type='text' placeholder="Оставьте ваш комментарий"
+            options='1, 2'}}
+
+            <button class="modal__btn">
+                Оставить заявку
+            </button>
+
+        </div>
+
     </div>
 
 </dialog>

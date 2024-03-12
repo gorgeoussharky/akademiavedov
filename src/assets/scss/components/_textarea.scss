@@ -1,0 +1,29 @@
+.textarea {
+    &__wrap {
+        position: relative;
+    }
+
+    &__control {
+        border: 1px solid #c9c9c9;
+        border-radius: rem(14px);
+        padding: rem(18px);
+        width: 100%;
+        background: transparent;
+
+        &::placeholder {
+            color: #8d8d8d;
+        }
+    }
+
+    &__label {
+        @extend %sr-only;
+    }
+
+    &--error {
+        .input__control {
+            border-color: #e30500;
+            transition: 350ms;
+            color: #e30500;
+        }
+    }
+}
