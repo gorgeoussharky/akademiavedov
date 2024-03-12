@@ -78,9 +78,11 @@
 
                     </div>
 
-                    <div class="hero__img-wrap" data-aos="fade-left">
+                    <div class="hero__img-wrap">
 
-                        {{> picture class="hero__img" unlazy=true src="hero-img-1.png" }}
+                        <div data-aos="fade-left">
+                            {{> picture class="hero__img" unlazy=true src="hero-img-1.png" }}
+                        </div>
 
                         <button class="hero__video-btn" data-video="https://www.youtube.com/embed/_JUBzbsIEII?si=DkiawRhYnn1DiMOJ" data-modal="videoModal">
                             <svg width="30" height="32" viewBox="0 0 30 32" fill="none"
@@ -259,11 +261,11 @@
 
                             <li class="reviews__reviews-item reviews-item swiper-slide">
 
-                                <div>
-                                    {{#video this.src}}
-                                    <video class="reviews-item__video" controls preload="metadata" src="{{url}}">
+                                <div class="reviews-item__video" data-lazy-video>
+                                    <video controls preload="auto" playsinline 
+                                        {{#img this.poster false}}poster="{{webp}}"{{/img}} 
+                                        {{#video this.src}}data-src="{{url}}"{{/video}}>
                                     </video>
-                                    {{/video}}
                                 </div>
 
                             </li>
@@ -299,7 +301,7 @@
                         </h2>
 
                         <div class="consultation__text">
-                            Это уникальная возможность встретиться с Еленой Ипек, получить ответы на свои вопросы, а
+                            Это уникальная возможность встретиться с Кешава Ипек, получить ответы на свои вопросы, а
                             также обрести состояние, которое достигается за долгие годы медитаций
                         </div>
 
@@ -344,9 +346,9 @@
 
                         </div>
 
-                        <a href="" class="consultation__btn" data-modal="signupModal">
+                        <button data-modal="signupModal" class="consultation__btn">
                             Записаться на консультацию
-                        </a>
+                        </button>
 
                     </div>
 
@@ -375,7 +377,7 @@
                     <div class="about__text-content">
 
                         <h2 class="about__heading">
-                            Несколько слов о Кешава Ипак
+                            Несколько слов о Кешава Ипек
                         </h2>
 
                         <ul class="about__list">
@@ -442,7 +444,7 @@
 
                 <div class="videos__content">
 
-                    <h2 class="videos__heading">Видео от Елены Ипек</h2>
+                    <h2 class="videos__heading">Видео от Кешава Ипек</h2>
 
                     <div class="videos__list-wrap swiper">
 
@@ -540,7 +542,7 @@
 
                 <div class="preregistration__content">
 
-                    <div class="preregistration__content-wrap">
+                    <form class="preregistration__content-wrap" data-form>
 
                         <div class="preregistration__text">
                             Оставь заявку, чтобы первым узнать о новом наборе
@@ -556,7 +558,7 @@
                             class="preregistration__select"
                             label="Выберите курс"
                             options='Управлять финансами может каждый, Основы здорового питания, Как изменить судьбу,
-                            Исследуйте тайны мира, Бхавагад-Гита, Высокочастотные медитативные практики'
+                            Исследуйте тайны мира, Бхагавад-Гита, Высокочастотные медитативные практики'
                             name="course" }}
 
                             {{> ./form/input name="tel" required=true class="preregistration__input" type='tel' placeholder="Введите ваш телефон"
@@ -578,7 +580,7 @@
                             </label>
                         </div>
 
-                    </div>
+                    </form>
 
                 </div>
 

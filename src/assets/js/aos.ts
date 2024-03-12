@@ -1,5 +1,5 @@
 import AOS from 'aos'
 
 AOS.init({
-    startEvent: 'load'
+    duration: 1000,
 })

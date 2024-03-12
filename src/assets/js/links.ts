@@ -3,13 +3,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     links.forEach((link) => {
         link.addEventListener('click', (e) => {
-            e.preventDefault()
-
             if (link.hash) {
-                const target = document.querySelector(link.hash)
+                e.preventDefault()
+                const target = document.querySelector(link.hash) as HTMLElement | undefined
 
                 if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' })
+                    window.scrollTo({
+                        top: target.offsetTop - 100,
+                        behavior: 'smooth'
+                    })
                 }
             }
         })

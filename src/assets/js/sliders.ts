@@ -15,7 +15,6 @@ const initReviewsCarousel = () => {
     new Swiper(list, {
         slidesPerView: 1.5,
         loop: true,
-        noSwipingClass: 'swiper-no-swiping',
         spaceBetween: 30,
         breakpoints: {
             500: {
@@ -26,7 +25,7 @@ const initReviewsCarousel = () => {
             },
         },
         on: {
-            touchStart() {
+            touchMove() {
                 list.classList.add('is-swiping')
             },
             touchEnd() {
@@ -35,6 +34,7 @@ const initReviewsCarousel = () => {
         },
         pagination: {
             el: pagination,
+            clickable: true,
         },
         modules: [Pagination],
     })

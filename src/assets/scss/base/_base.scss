@@ -21,7 +21,7 @@ html {
 :root {
     --main: #d5627b;
     --accent: #d4133d;
-    --grad: linear-gradient(358.31deg, #9a0022 1.44%, #d4133d 98.56%);
+    --grad: linear-gradient(360deg, #9a0022 1.44%, #d4133d 98.56%);
 }
 
 .locked {
@@ -32,6 +32,10 @@ body {
     overflow-x: hidden;
     font-family: Gilroy, sans-serif;
     background: #f1f1f1;
+
+    @include media-breakpoint-down(md) {
+        padding-top: rem(74px);
+    }
 }
 
 %sr-only {

@@ -11,6 +11,12 @@
         margin-bottom: rem(30px);
     }
 
+    &__list-wrap {
+        @include media-breakpoint-down(sm) {
+            overflow: visible;
+        }
+    }
+
     &__pagination {
         display: flex;
         justify-content: center;
@@ -21,6 +27,7 @@
         .swiper-pagination-bullet {
             width: rem(8px);
             height: rem(8px);
+            flex: 0 0 auto;
             border-radius: 50%;
             background-color: rgba(103 103 103 / 30%);
             transition: 500ms;
