@@ -27,6 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     const resp = await req.json() as { success: boolean }
 
+                    form.classList.remove('loading')
+
                     if (resp.success) {
                         formEl.reset()
                         hideAllModals()
@@ -39,11 +41,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     const errorModal = document.querySelector('#modal-error') as HTMLDialogElement | undefined
                     errorModal?.showModal()
                 } catch (err) {
+                    form.classList.remove('loading')
                     const errorModal = document.querySelector('#modal-error') as HTMLDialogElement | undefined
                     errorModal?.showModal()
                 }
 
-                form.classList.remove('loading')
+                
 
 
             })()

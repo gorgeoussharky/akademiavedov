@@ -559,9 +559,9 @@
                             label="Выберите курс"
                             options='Управлять финансами может каждый, Основы здорового питания, Как изменить судьбу,
                             Исследуйте тайны мира, Бхагавад-Гита, Высокочастотные медитативные практики'
-                            name="course" }}
+                            name="Курс" }}
 
-                            {{> ./form/input name="tel" required=true class="preregistration__input" type='tel' placeholder="Введите ваш телефон"
+                            {{> ./form/input  required=true class="preregistration__input" type='tel' name="Телефон" label="Телефон" placeholder="Введите ваш телефон"
                             options='1, 2'}}
 
                             <button class="preregistration__btn">
@@ -572,7 +572,7 @@
 
                         <div class="preregistration__form-group  preregistration__form-group--checkbox">
 
-                            <input class="preregistration__control" name="policy" type="checkbox"
+                            <input class="preregistration__control" type="checkbox"
                                 id="checkbox-policy" required checked>
 
                             <label for="checkbox-policy" class="preregistration__label">

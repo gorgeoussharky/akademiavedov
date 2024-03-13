@@ -29,15 +29,15 @@
 
             <div class="modal__forms-wrap">
 
-                {{> ./form/input name="name" required=true class="modal__input" type='name' placeholder="Введите ваше имя"
+                {{> ./form/input name="Имя" required=true class="modal__input" label="Имя" placeholder="Введите ваше имя"
                 options='1, 2'}}
 
-                {{> ./form/input name="tel" required=true class="modal__input" type='tel' placeholder="Введите ваш телефон"
+                {{> ./form/input name="Телефон" required=true class="modal__input" type='tel' label="Телефон" placeholder="Введите ваш телефон"
                 options='1, 2'}}
 
             </div>
 
-            {{> ./form/textarea name="text" required=true class="modal__textarea" type='text' placeholder="Оставьте ваш комментарий"
+            {{> ./form/textarea name="Комментарий" class="modal__textarea" label="Комментарий" placeholder="Оставьте ваш комментарий"
             options='1, 2'}}
 
             <button class="modal__btn">
