@@ -1,0 +1,188 @@
+.subscribe {
+    &__wrap {
+        position: relative;
+        margin-bottom: rem(120px);
+        z-index: 6;
+
+        @include media-breakpoint-down(lg) {
+            margin-bottom: rem(40px);
+        }
+    }
+
+    &__content {
+        position: relative;
+    }
+
+    &__text-content {
+        position: relative;
+        z-index: 10;
+        max-width: rem(630px);
+
+        @include media-breakpoint-down(lg) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin: 0 auto;
+            margin-bottom: rem(30px);
+        }
+
+        @include media-breakpoint-down(md) {
+            font-size: rem(14px);
+            line-height: rem(20px);
+        }
+    }
+
+    &__heading {
+        @extend h2;
+
+        text-align: start;
+
+        @include media-breakpoint-down(lg) {
+            text-align: center;
+        }
+    }
+
+    &__text {
+        line-height: rem(24px);
+        margin-bottom: rem(50px);
+        max-width: rem(500px);
+
+        span {
+            font-weight: 700;
+        }
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: rem(30px);
+        }
+    }
+
+    &__btns-wrap {
+        display: flex;
+        gap: rem(30px);
+
+        @include media-breakpoint-down(sm) {
+            flex-direction: column;
+        }
+    }
+
+    &__btn {
+        @extend %btn;
+
+        display: block;
+        padding: rem(30px) rem(50px);
+
+        @include media-breakpoint-down(lg) {
+            padding: rem(25px);
+        }
+    }
+
+    &__btn--blue {
+        background: #08c;
+        box-shadow: 0 rem(4px) 0 0 #005c8a, 0 rem(10px) rem(15px) 0 #005c8a;
+
+        &:hover {
+            box-shadow: 0 rem(4px) 0 0 #005c8a, 0 rem(10px) rem(5px) 0 #005c8a;
+        }
+    }
+
+    &__btn--red {
+        background: #c4302b;
+        box-shadow: 0 rem(4px) 0 0 #6a0017, 0 rem(10px) rem(15px) 0 #6a0017;
+
+        &:hover {
+            box-shadow: 0 rem(4px) 0 0 #6a0017, 0 rem(10px) rem(5px) 0 #6a0017;
+        }
+    }
+
+    &__img-wrap {
+        position: absolute;
+        right: 0;
+        bottom: rem(-120px);
+        width: 45vw;
+        max-width: rem(350px);
+        max-height: rem(586px);
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: rem(493px);
+            height: rem(493px);
+            background-image: url("/src/assets/img/subscribe-img-2.png?as=webp");
+            bottom: rem(30px);
+            right: rem(-70px);
+            background-size: contain;
+            animation: rotate 60s normal linear infinite;
+            z-index: -1;
+
+            @include media-breakpoint-down(lg) {
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 65vw;
+                height: 65vw;
+            }
+        }
+
+        @include media-breakpoint-down(xl) {
+            width: 50vw;
+        }
+
+        @include media-breakpoint-down(lg) {
+            position: relative;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            max-width: 100%;
+            width: 100%;
+
+            img {
+                display: block;
+                max-width: 40vw;
+                margin: auto;
+            }
+        }
+    }
+
+    &__img {
+        display: block;
+    }
+
+    &__bg {
+        position: absolute;
+        right: rem(-100px);
+        bottom: rem(-140px);
+        z-index: 3;
+
+        img {
+            width: 60vw;
+        }
+
+        @include media-breakpoint-down(lg) {
+            bottom: rem(-20px);
+
+            img {
+                width: 70vw;
+            }
+        }
+
+        @include media-breakpoint-down(lg) {
+            right: 0;
+
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}

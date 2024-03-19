@@ -84,7 +84,9 @@
                             {{> picture class="hero__img" unlazy=true src="hero-img-1.png" }}
                         </div>
 
-                        <button class="hero__video-btn" data-video="https://www.youtube.com/embed/_JUBzbsIEII?si=DkiawRhYnn1DiMOJ" data-modal="videoModal">
+                        <button class="hero__video-btn"
+                            data-video="https://www.youtube.com/embed/_JUBzbsIEII?si=DkiawRhYnn1DiMOJ"
+                            data-modal="videoModal">
                             <svg width="30" height="32" viewBox="0 0 30 32" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -101,9 +103,11 @@
 
             <div class="hero__bg-wrap">
 
-                <div data-aos="fade-right" data-aos-anchor=".hero">{{> picture unlazy=true class="hero__bg-left" src="hero-bg-l.png" }}</div>
+                <div data-aos="fade-right" data-aos-anchor=".hero">{{> picture unlazy=true class="hero__bg-left"
+                    src="hero-bg-l.png" }}</div>
 
-                <div data-aos="fade-left" data-aos-anchor=".hero">{{> picture unlazy=true class="hero__bg-right" src="hero-bg-r.png" }}</div>
+                <div data-aos="fade-left" data-aos-anchor=".hero">{{> picture unlazy=true class="hero__bg-right"
+                    src="hero-bg-r.png" }}</div>
 
             </div>
 
@@ -210,17 +214,17 @@
                                 <a href="{{this.url}}" target="_blank" rel="nofollow" class="trainings-item__link">
 
                                     {{> picture class="trainings-item__img" src=this.img }}
-    
+
                                     <div class="trainings-item__body">
-    
+
                                         <h2 class="trainings-item__heading">
                                             {{this.title}}
                                         </h2>
-    
+
                                         <div class="trainings-item__text">
                                             {{{ this.desc }}}
                                         </div>
-    
+
                                     </div>
                                 </a>
                             </section>
@@ -243,6 +247,87 @@
 
     </article>
 
+    <article class="subscribe">
+
+        <div class="subscribe__wrap">
+
+            <div class="container">
+
+                <div class="subscribe__content">
+
+                    <div class="subscribe__text-content">
+
+                        <h2 class="subscribe__heading" data-aos="fade-up">
+                            Хотите быть со мной на связи 24/7?
+                        </h2>
+
+                        <div class="subscribe__text">
+                            <span>Подписывайтесь на мои Telegram- и YouTube-каналы,</span> где я делюсь советами по
+                            медитации,
+                            управлению финансами, отдаю информацию о ближайших мероприятий, отвечаю на вопросы и провожу
+                            разборы ваших запросов на прямых эфирах
+                        </div>
+
+                        <div class="subscribe__btns-wrap">
+
+                            <a href="https://t.me/KPkursi" target="_blank" rel="nofollow"
+                                class="subscribe__btn subscribe__btn--blue">
+                                Подписаться в Telegram
+
+                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.87054 2.97428C-0.490396 5.42819 -0.00055232 5.22194 -0.00055232 5.46335C-0.00055232 5.63678 0.0603852 5.73053 0.217416 5.7985C0.283041 5.82663 0.929916 6.07038 1.65179 6.33991L2.96663 6.82975L3.50101 8.55241C3.79632 9.50163 4.05648 10.3102 4.07992 10.3501C4.15492 10.4743 4.34007 10.5329 4.4807 10.479C4.51117 10.4673 4.89788 10.1602 5.3432 9.79928C5.78851 9.436 6.18695 9.12194 6.23148 9.10319C6.33226 9.061 6.4471 9.061 6.55257 9.10553C6.5971 9.12428 7.24163 9.58131 7.98695 10.1204C8.72992 10.6618 9.38148 11.1305 9.4307 11.1657C9.59007 11.2735 9.82445 11.2337 9.92288 11.0813C9.96507 11.0157 11.9994 1.23522 11.9994 1.09694C11.9994 0.904751 11.8635 0.771157 11.6666 0.775845C11.5916 0.775845 10.1268 1.33131 5.87054 2.97428ZM9.36976 2.95788C9.38617 2.97428 9.39788 3.00241 9.39788 3.02584C9.39788 3.04694 8.37367 4.01491 7.1221 5.17975C5.68538 6.51569 4.82054 7.33366 4.77835 7.40163C4.67523 7.56335 4.6471 7.68522 4.55804 8.34381C4.49007 8.83835 4.46898 8.9485 4.42913 8.986C4.39163 9.0235 4.37054 9.02819 4.31898 9.00944C4.2557 8.98835 4.24398 8.95319 3.94398 7.91022C3.75648 7.25866 3.6346 6.78991 3.63226 6.72428C3.63226 6.59069 3.72601 6.39381 3.82679 6.3235C3.92288 6.25319 9.31117 2.93209 9.32992 2.92975C9.33695 2.92975 9.35335 2.94147 9.36976 2.95788Z"
+                                        fill="white" />
+                                </svg>
+
+                            </a>
+
+                            <a href="https://www.youtube.com/@Keshava_Ipek" target="_blank" rel="nofollow"
+                                class="subscribe__btn subscribe__btn--red">
+                                Подписаться в YouTube
+
+                                <svg width="12" height="10" viewBox="0 0 12 10" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M2.63686 0.783615C2.05561 0.809397 1.65249 0.86799 1.27749 0.985178C0.686863 1.17033 0.30952 1.53362 0.143113 2.07971C0.016551 2.49221 0.0142072 2.52268 0.00483223 4.60158C-0.00454277 6.61955 0.00483224 6.90315 0.0962385 7.3508C0.199363 7.8594 0.36577 8.19924 0.656395 8.49455C1.12514 8.97033 1.72514 9.16487 2.88296 9.22112C3.22983 9.23752 4.45327 9.24221 6.44546 9.23518C9.64936 9.22346 9.69858 9.22346 10.2189 9.1133C11.1447 8.91877 11.6392 8.45237 11.8572 7.56643C11.9861 7.04846 11.9884 6.98752 11.9884 4.81252C11.9884 3.29377 11.9814 2.7594 11.958 2.60237C11.822 1.67424 11.4822 1.22893 10.7228 0.985178C10.3525 0.865646 9.97046 0.81174 9.28843 0.781271C8.71889 0.75549 3.2228 0.757833 2.63686 0.783615ZM5.36265 3.40393C6.15249 3.80002 7.72749 4.63205 7.77671 4.67893C7.94077 4.82893 7.93608 5.05627 7.76499 5.2133C7.68765 5.28596 5.2103 6.5844 5.08608 6.61721C4.92905 6.6594 4.75093 6.57502 4.67827 6.42033C4.64546 6.35002 4.64077 6.18362 4.64077 4.9344V3.53049L4.69468 3.4508C4.7228 3.40862 4.78374 3.34768 4.82593 3.31955C4.95483 3.23283 5.05093 3.2469 5.36265 3.40393Z"
+                                        fill="white" />
+                                </svg>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <div data-aos="fade-left">
+
+                        <div class="subscribe__img-wrap">
+
+                            <div>
+                                {{> picture class="subscribe__img" src="subscribe-img-1.png" }}
+                            </div>
+
+                        </div>
+
+                        <div class="subscribe__bg-wrap">
+
+                            <div>
+                                {{> picture class="subscribe__bg" src="subscribe-bg-1.png" }}
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </article>
+
     <article class="reviews" id="reviews">
 
         <div class="reviews__wrap">
@@ -251,9 +336,9 @@
 
                 <div class="reviews__content">
 
-                    <h2 class="reviews__heading"  data-aos="fade-up">Отзывы и результаты наставничества</h2>
+                    <h2 class="reviews__heading" data-aos="fade-up">Отзывы и результаты наставничества</h2>
 
-                    <div class="reviews__list-wrap swiper" >
+                    <div class="reviews__list-wrap swiper">
 
                         <ul class="reviews__list swiper-wrapper">
 
@@ -262,9 +347,9 @@
                             <li class="reviews__reviews-item reviews-item swiper-slide">
 
                                 <div class="reviews-item__video" data-lazy-video>
-                                    <video controls preload="auto" playsinline 
-                                        {{#img this.poster false}}poster="{{webp}}"{{/img}} 
-                                        {{#video this.src}}data-src="{{url}}"{{/video}}>
+                                    <video controls preload="auto" playsinline {{#img this.poster
+                                        false}}poster="{{webp}}" {{/img}} {{#video this.src}}data-src="{{url}}"
+                                        {{/video}}>
                                     </video>
                                 </div>
 
@@ -368,7 +453,7 @@
 
     <article class="about" data-aos="fade-up" id="about" data-aos-anchor=".consultation">
 
-        <div class="about__wrap" >
+        <div class="about__wrap">
 
             <div class="container">
 
@@ -561,7 +646,8 @@
                             Исследуйте тайны мира, Бхагавад-Гита, Высокочастотные медитативные практики'
                             name="Курс" }}
 
-                            {{> ./form/input  required=true class="preregistration__input" type='tel' name="Телефон" label="Телефон" placeholder="Введите ваш телефон"
+                            {{> ./form/input required=true class="preregistration__input" type='tel' name="Телефон"
+                            label="Телефон" placeholder="Введите ваш телефон"
                             options='1, 2'}}
 
                             <button class="preregistration__btn">
@@ -572,11 +658,12 @@
 
                         <div class="preregistration__form-group  preregistration__form-group--checkbox">
 
-                            <input class="preregistration__control" type="checkbox"
-                                id="checkbox-policy" required checked>
+                            <input class="preregistration__control" type="checkbox" id="checkbox-policy" required
+                                checked>
 
                             <label for="checkbox-policy" class="preregistration__label">
-                                Нажимая кнопку вы соглашаетесь c условиями <a href="policy.pdf">политики конфиденциальности</a>
+                                Нажимая кнопку вы соглашаетесь c условиями <a href="policy.pdf">политики
+                                    конфиденциальности</a>
                             </label>
                         </div>
 
